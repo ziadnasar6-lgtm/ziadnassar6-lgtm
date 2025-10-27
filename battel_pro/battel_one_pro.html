@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Battle Arena - Lobby</title>
+  <link rel="stylesheet" href="battel_one_pro.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #000010 0%, #000 100%);
+      overflow: hidden;
+      color: #00bfff;
+      height: 100vh;
+      display: flex;
+    }
+
+    /* 🔹 Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: rgba(0, 0, 0, 0.8);
+      border-bottom: 1px solid #00bfff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 10;
+    }
+
+    .navbar h1 {
+      font-size: 1.5rem;
+      color: #00bfff;
+      text-shadow: 0 0 10px #00bfff;
+    }
+
+    .sound-controls button {
+      background: none;
+      border: 1px solid #00bfff;
+      color: #00bfff;
+      margin-left: 10px;
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .sound-controls button:hover {
+      background: #00bfff;
+      color: black;
+    }
+
+    /* 🔹 Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 220px;
+      height: calc(100% - 60px);
+      background: rgba(0, 0, 0, 0.7);
+      border-right: 1px solid #00bfff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 5;
+    }
+
+    .player-info {
+      line-height: 1.8;
+    }
+
+    .player-info span {
+      display: block;
+      color: #00bfff;
+      text-shadow: 0 0 8px #00bfff;
+    }
+
+    /* 🔹 Main Content */
+    .main-content {
+      margin-left: 240px;
+      margin-top: 70px;
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 3;
+    }
+
+    .mode-select {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 150px;
+    }
+
+    .mode {
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #00bfff;
+      border-radius: 15px;
+      padding: 40px;
+      width: 220px;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00bfff;
+      transition: 0.3s;
+    }
+
+    .mode:hover {
+      background: #00bfff;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    /* 🔹 Chat Box */
+    .chat-box {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      background: rgba(10, 11, 11, 0.7);
+      border: 1px solid #00bfff;
+      border-radius: 15px;
+      padding: 10px;
+    }
+
+    .chat-box input {
+      width: 80%;
+      background: black;
+      border: 1px solid #00bfff;
+      color: #00bfff;
+      padding: 8px;
+      border-radius: 10px;
+    }
+
+    .chat-box button {
+      background: #00bfff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: black;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+
+    /* 🔹 Smoke Effect (Canvas) */
+    
+    canvas#smokeCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <canvas id="smokeCanvas"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>⚔️ Code Battle Arena</h1>
+    <div class="sound-controls">
+      <button id="volDown">🔉</button>
+      <button id="volUp">🔊</button>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="player-info">
+      <span>Name: <strong>PlayerX</strong></span>
+      <span>Rank: <strong>Bronze</strong></span>
+      <span>Language: <strong>JavaScript</strong></span>
+      <span>Age: <strong>18</strong></span>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main-content">
+    <div class="mode-select">
+
+<a href="QU_ONE.html" class="mode">⚔️ Play Solo</a>
+<a href="friend.html" class="mode">👥 Play with Friend</a>
+<a href="group.html" class="mode">🏆 Join Group</a>
+
+
+
+    </div>
+
+    <div class="chat-box">
+      <input type="text" placeholder="Type your message...">
+      <button>Send</button>
+    </div>
+  </main>
+
+
+  <script>
+    /* 🔊 Volume Controls */
+    const music = document.getElementById('bgMusic');
+    document.getElementById('volUp').onclick = () => { music.volume = Math.min(1, music.volume + 0.1); };
+    document.getElementById('volDown').onclick = () => { music.volume = Math.max(0, music.volume - 0.1); };
+
+    /* 💨 Smoke Effect */
+    const canvas = document.getElementById("smokeCanvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    class Smoke {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = canvas.height + Math.random() * 100;
+        this.size = Math.random() * 60 + 40;
+        this.speedY = Math.random() * 1 + 0.5;
+        this.alpha = Math.random() * 0.3 + 0.2;
+      }
+      update() {
+        this.y -= this.speedY;
+        this.alpha -= 0.001;
+      }
+      draw() {
+        ctx.beginPath();
+        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
+        gradient.addColorStop(0, `rgba(0,191,255,${this.alpha})`);
+        gradient.addColorStop(1, `rgba(0,0,0,0)`);
+        ctx.fillStyle = gradient;
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    const smokes = [];
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (smokes.length < 100) smokes.push(new Smoke());
+      smokes.forEach((s, i) => {
+        s.update();
+        s.draw();
+        if (s.alpha <= 0) smokes.splice(i, 1);
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
+  <audio id="bgMusic" src="sounds/battle-epic-241575 (1).mp3"></audio>
+ <script src="battelone_pro.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+
+
+
+
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout */
+body {
+  display: flex;
+  background-color: #eeebe6;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.sidebar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.sidebar-links a:hover {
+  color: #f9b233;
+}
+
+/* Main Content */
+.content {
+  margin-left: 250px;
+  padding: 40px;
+  width: calc(100% - 250px);
+}
+
+/* Intro Box */
+.intro-box {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  max-height: 250px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #f9b233 #fff;
+}
+
+.intro-box h1 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.intro-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.intro-buttons button {
+  background-color: #f9b233;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.intro-buttons button:hover {
+  background-color: #e0a025;
+}
+
+/* Divider */
+.divider {
+  height: 2px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+/* Branches */
+.branches {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.branch-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.branch {
+  flex: 1 1 300px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.branch:hover {
+  transform: translateY(-5px);
+}
+
+.branch h3 {
+  color: #222;
+  margin-bottom: 8px;
+}
+
+/* Course Cards */
+.courses {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.course-card {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card h3 {
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.course-card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.start-btn {
+  background-color: #f9b233;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #e0a025;
+}
+
+/* Footer */
+footer {
+    width : 100%;
+    position: fixed;
+    bottom: 0;
+left: 240px;
+width: calc(100%/240px);
+background-color: #1e1e2f;
+color: #ddd;
+text-align: center;
+padding: 14px 0 ;
+font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.zoz{
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #ff7b00; /* برتقالي فاح */
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.6); /* توهج ناعم */
+  transition: all 0.3s ease;
+}
+
+.zoz:hover {
+  background-color: #ffa733; /* لون أفتح عند المرور */
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.9); /* توهج أقوى */
+  transform: scale(1.05); /* تكبير بسيط عند المرور */
+}
+
+
+
+
+
+/* 
+
+.zoz_one {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #f5f5dc;  لون سمني (بيج فاتح) 
+  color: #333;  لون النص 
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 223, 150, 0.5); توهج ناعم ذهبي 
+  transition: all 0.3s ease;
+}
+
+.zoz_one:hover {
+  background-color: #fff8dc;  أوف وايت أفتح 
+  box-shadow: 0 0 20px rgba(255, 223, 150, 0.9);  توهج أقوى 
+  transform: scale(1.05);
+} */
+
+
+
+
+
+/* ===== Sidebar Buttons ===== */
+.sidebar button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f9b233;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #e0a025;
+  transform: scale(1.05);
+}
+
+/* Rank Message Box */
+#rank-message {
+  background-color: #2c2c3c;
+  color: #fff;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: none;
+}
+
+#rank-message.show {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Dark Mode Styles ===== */
+body.dark-mode {
+  background-color: #1e1e2f;
+  color: #eee;
+}
+
+body.dark-mode .content,
+body.dark-mode .branches,
+body.dark-mode .courses,
+body.dark-mode .intro-box {
+  background-color: #2a2a3d;
+  color: #fff;
+}
+
+body.dark-mode .course-card {
+  background-color: #3a3a4d;
+}
+
+body.dark-mode .start-btn {
+  background-color: #f9b233;
+}
+
+.hidden {
+  display: none;
+}

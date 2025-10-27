@@ -1,0 +1,229 @@
+
+
+
+/* إعداد عام */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #eef3fa;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* 🔵 Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #1e3a8a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-size: 1.3rem;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🟣 Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #1e1e2f;
+  color: white;
+  padding: 90px 15px 20px;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #374151;
+  color: #fff;
+}
+
+#translate-btn {
+  margin-top: 30px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#translate-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* 🟢 Main Content */
+.content {
+  margin-left: 240px;
+  margin-top: 80px;
+  padding: 20px;
+  flex: 1;
+}
+
+/* 🎙️ Recorder Section */
+.recorder-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.recorder-controls {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.recorder-controls button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.recorder-controls button:hover {
+  background-color: #2563eb;
+}
+
+/* 📘 Cards */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+    height: 300px;
+    overflow: hidden;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card button {
+  margin-top: 10px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #172554;
+}
+
+
+
+
+/* ❌ Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #f7f7f7;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: crimson;
+  transform: scale(1.1);
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+.beige-btn {
+      background-color: #e6d5b8;
+      color: #000;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none; /* يشيل الخط */
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    /* تأثير لما الماوس يعدي */
+    .beige-btn:hover {
+      background-color: #d9c7a8;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+.zoz {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #f5deb3; /* لون بيج */
+  color: #000; /* لون الخط أسود */
+  font-weight: bold;
+  text-decoration: none; /* يشيل الخط */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* ✨ عند المرور */
+.zoz:hover {
+  background: #f0d49a; /* درجة أغمق شوية */
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 🖱️ عند الضغط */
+.zoz:active {
+  transform: scale(0.97);
+}

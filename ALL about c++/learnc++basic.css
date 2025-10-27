@@ -1,0 +1,529 @@
+
+
+
+
+
+/* === GENERAL STYLE === */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #0a0a12, #001f3f, #0044cc);
+  color: #f1f1f1;
+  display: flex;
+  overflow-x: hidden;
+}
+
+/* === NAVBAR === */
+ /* .navbar {
+  position: fixed;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 40, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 2px solid #007bff;
+  z-index: 10;
+}
+
+.navbar h1 {
+  color: #66b2ff;
+  font-size: 1.5em;
+}
+
+.navbar .nav-links a {
+  display: inline;
+  color: #fff;
+  margin-left: 0px;
+  margin-right: 25px ;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #66b2ff;
+} 
+
+.zoz1 :hover ,.zoz2
+{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px; /* يخليها مرتاحة داخل البار 
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+
+
+
+
+  background: rgba(0, 123, 255, 0.2);
+  color: #66b2ff;
+  box-shadow: 0 0 10px #007bff;
+
+} */
+
+/* ==== Navbar ==== */
+
+
+
+/* === NAVBAR === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 40, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px; /* زودنا padding شوية من اليمين والشمال */
+  border-bottom: 2px solid #007bff;
+  z-index: 10;
+}
+
+.navbar h1 {
+  color: #66b2ff;
+  font-size: 1.6em;
+  margin: 0;
+}
+
+/* روابط النافبار */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* مسافة ثابتة بين العناصر */
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* تأثير hover */
+.nav-links a:hover {
+  background: rgba(0, 123, 255, 0.2);
+  color: #66b2ff;
+  box-shadow: 0 0 10px #007bff;
+}
+
+
+
+/* === SIDEBAR === */
+.sidebar {
+  width: 220px;
+  background: rgba(0, 0, 40, 0.9);
+  height: 100vh;
+  padding: 80px 20px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  border-right: 2px solid #007bff;
+}
+
+.sidebar h2 {
+  color: #66b2ff;
+  margin-bottom: 10px;
+}
+
+.progress-dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: gray;
+}
+
+.dot.active {
+  background: #00ff88;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  margin-left: 240px;
+  padding: 100px 40px 60px;
+  width: calc(100% - 240px);
+  overflow-y: auto;
+}
+
+.snake-path {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 65px;
+}
+
+.snake-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 120px;
+  z-index: 0;
+}
+
+.lesson-circle {
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #1a1a40;
+  border: 3px solid #007bff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.lesson-circle.active {
+  background: #007bff;
+  box-shadow: 0 0 20px #007bff;
+}
+
+.lesson-circle.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lesson-circle:hover:not(.locked) {
+  transform: scale(1.1);
+}
+
+/* === LESSON BOX === */
+.lesson-container {
+  background: rgba(0, 0, 40, 0.8);
+  border: 2px solid #007bff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 15px #0044cc;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.lesson-container h2 {
+  color: #66b2ff;
+}
+
+.task-box {
+  margin-top: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  background: #0a0a12;
+  color: #fff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #3399ff;
+}
+
+.result-box {
+  margin-top: 15px;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid red;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.result-box.hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* === CONTACT SECTION === */
+.contact {
+  background: #001f3f;
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 2px solid #007bff;
+  color: #ddd;
+}
+
+.contact h2 {
+  color: #66b2ff;
+}
+
+/* 
+.zoz1
+{
+    margin-right: 10%;
+} */
+
+
+
+
+
+.lesson-box {
+  background: rgba(10, 20, 40, 0.8);
+  border: 1px solid #337aff;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(51, 122, 255, 0.3);
+  padding: 30px;
+  margin-top: 40px;
+  max-width: 850px;
+  margin-inline: auto;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.lesson-box:hover {
+  box-shadow: 0 0 40px rgba(51, 122, 255, 0.6);
+}
+
+.lesson-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #00aaff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.lesson-link:hover {
+  color: #66ccff;
+  text-decoration: underline;
+}
+
+.task-area textarea {
+  width: 100%;
+  min-height: 140px;
+  background: #0d0f18;
+  color: #e1e1e1;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: monospace;
+  resize: vertical;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056cc;
+}
+
+
+
+
+
+
+.Task_zoz ,.zoz 
+{
+/* زرار اللينك الأساسي */
+#lesson-link {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(90deg, #000, #0044ff, #8a00ff);
+  background-size: 300%;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 10px rgba(138, 0, 255, 0.4);
+  animation: gradientFlow 5s ease infinite;
+  border: none;
+  cursor: pointer;
+}
+
+/* أنميشن اللون المتغيّر */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* تأثير عند المرور بالماوس */
+#lesson-link:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(138, 0, 255, 0.8),
+              0 0 50px rgba(0, 68, 255, 0.5);
+  letter-spacing: 1px;
+}
+
+/* تأثير عند الضغط */
+#lesson-link:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+
+
+}
+
+
+/* نص متحرك بألوان متغيرة (أسود → أزرق → بنفسجي) */
+.Task_zoz {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #000, #0044ff, #8a00ff);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textFlow 5s ease infinite;
+  transition: transform 0.4s ease, text-shadow 0.4s ease;
+  text-shadow: 0 0 10px rgba(138, 0, 255, 0.4);
+  cursor: default;
+}
+
+/* الأنميشن */
+@keyframes textFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* تأثير لما تمر عليه بالماوس */
+.fancy-text:hover {
+  transform: scale(1.08);
+  text-shadow: 0 0 25px rgba(138, 0, 255, 0.8),
+               0 0 40px rgba(0, 68, 255, 0.6);
+}
+
+
+
+
+
+
+
+/* صندوق نص منوّر */
+.zoz_two{
+  display: inline-block;
+  padding: 15px 25px;
+  margin: 10px 0;
+  color: #e6e6e6;
+  font-size: 18px;
+  font-weight: 600;
+  background: rgba(10, 20, 40, 0.9);
+  border: 2px solid #0080ff;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 128, 255, 0.4);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير خفيف عند المرور بالماوس */
+.text-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px rgba(0, 128, 255, 0.7);
+}
+
+
+
+
+ .Home ,.Tshatooo ,.Tshato_two{
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 28px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  box-shadow: 0 0 10px rgba(93, 63, 211, 0.6), 
+              0 0 20px rgba(0, 0, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+/* 🌟 دروس مكتملة */
+.lesson-circle.completed {
+  background: linear-gradient(135deg, #28a745, #4ee45c);
+  color: white;
+  box-shadow: 0 0 15px #4ee45c;
+}
+
+/* 🎉 رسالة تشجيع */
+.encouragement-popup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00bfff;
+  z-index: 9999;
+  animation: fadeIn 0.6s ease;
+}
+
+.encouragement-popup.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

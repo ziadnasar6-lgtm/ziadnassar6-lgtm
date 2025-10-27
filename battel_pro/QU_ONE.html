@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Battle Arena - Solo</title>
+
+<link rel="stylesheet" href="Qu_one.css">
+
+</head>
+<body>
+<canvas id="smokeCanvas"></canvas>
+<!-- Navbar -->
+<div class="navbar">⚔️ Code Battle Arena - Solo Mode</div>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <h2 id="playerName">PlayerX</h2><!-- HTML -->
+
+  
+  <!-- Score Box -->
+  <div id="scoreDisplay" class="score-box">
+    Score: 0 | Stars: 0
+  </div>
+<a href="contact.html" class="sidebar-btn">Contact us</a>
+<a href="index.html" class="sidebar-btn">The main page</a>
+<a href="ask.html" class="sidebar-btn">Ask Tshatooo</a>
+
+<!-- CSS -->
+<style>
+.sidebar-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #00f0ff; /* أزرق نيون */
+  background: #000; /* خلفية سوداء لتعزيز تأثير النيون */
+  padding: 12px 24px;
+  margin: 8px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+}
+
+.sidebar-btn:hover {
+  color: #fff;
+  background: #00f0ff;
+  box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff, 0 0 60px #00f0ff;
+  transform: scale(1.05);
+}
+</style>
+
+</div>
+
+<!-- Language Boxes -->
+<div class="lang-container">
+  <div class="lang-box" id="cppBtn">C++</div>
+  <div class="lang-box" id="pythonBtn">Python</div>
+  <div class="lang-box" id="jsBtn">JavaScript</div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div id="typeSelector" class="hidden">
+    <label>Choise type of Qu  </label>
+    <select id="questionTypeSelect">
+      <option value="mcq">MCQ</option>
+      <option value="codeCorrection">Code Correction</option>
+      <option value="programmingTask">Programming Task</option>
+    </select>
+    <br><br>
+    <label>Number of Qu Min : 5 Max 30 </label>
+    <input type="number" id="numQuestions" min="5" value="5">
+    <br><br>
+    <button id="startBattleBtn">Start the Game </button>
+  </div>
+
+  <!-- Timer -->
+  <div id="timer"></div>
+
+  <!-- Question Box -->
+  <div id="questionBox" class="hidden">
+    <h2 id="questionText"></h2>
+    <div id="mcqOptions" class="mcq-options"></div>
+    <textarea id="codeInput" placeholder="اكتب الكود هنا"></textarea>
+    <button id="submitCodeBtn">Send The Answers </button>
+    <div id="feedback"></div>
+  </div>
+</div>
+
+ <script>
+    const audio = new Audio('/sounds/zoz.mp3');
+
+    document.addEventListener('click', function playSound() {
+      audio.play();
+      document.removeEventListener('click', playSound);
+    });
+  </script>
+  <audio id="bgMusic" src="sounds/zozThebest.opus"></audio>
+<!-- !\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+
+
+
+
+
+<script src="qu_two.js"></script>
+
+<script src="QU_ONE.js"></script>
+</body>
+</html>

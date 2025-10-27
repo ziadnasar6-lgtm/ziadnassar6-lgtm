@@ -1,0 +1,336 @@
+
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+  background: linear-gradient(180deg, #ffffff, #eaf3ff);
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: linear-gradient(90deg, #1e90ff, #0077ff);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: slideDown 1s ease forwards;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.navbar .logo {
+  font-size: 1.6em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.navbar .logo span {
+  color: #cce6ff;
+  text-shadow: 0 0 12px #ffffff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #cce6ff;
+  text-shadow: 0 0 10px #ffffff;
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 130px 20px;
+  background: radial-gradient(circle at top, #f4faff, #ffffff);
+  animation: fadeIn 1.5s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero h1 {
+  font-size: 2.8em;
+  color: #0047ab;
+  margin-bottom: 15px;
+}
+.hero span {
+  color: #0077ff;
+  text-shadow: 0 0 18px #99ccff;
+}
+.hero p {
+  font-size: 1.2em;
+  color: #333;
+}
+.start-btn {
+  margin-top: 25px;
+  padding: 12px 35px;
+  background: linear-gradient(90deg, #0077ff, #009dff);
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 119, 255, 0.4);
+}
+.start-btn:hover {
+  background: linear-gradient(90deg, #005fcb, #0077ff);
+  box-shadow: 0 0 25px rgba(0, 119, 255, 0.9);
+  transform: translateY(-3px);
+}
+
+/* Subjects Section */
+.subjects {
+  padding: 80px 20px;
+  text-align: center;
+}
+.subjects h2 {
+  font-size: 2.2em;
+  color: #005fcb;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px #cce6ff;
+}
+.subjects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.subject-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0, 119, 255, 0.25);
+  transition: 0.4s ease;
+}
+.subject-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(0, 119, 255, 0.5);
+}
+
+/* Programming Path */
+.programming {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #f5faff, #e6f3ff);
+}
+.programming h2 {
+  font-size: 2.2em;
+  color: #0047ab;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px #cce6ff;
+}
+.path-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.path-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0, 119, 255, 0.25);
+  transition: 0.4s ease;
+}
+.path-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(0, 119, 255, 0.5);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(90deg, #0077ff, #1e90ff);
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+  animation: glowFooter 2s infinite alternate;
+}
+@keyframes glowFooter {
+  from {
+    text-shadow: 0 0 5px #ffffff;
+  }
+  to {
+    text-shadow: 0 0 15px #cce6ff;
+  }
+}
+
+
+
+
+.questions-card {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.questions-link {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff, #e6f0ff);
+  color: #003366;
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 20px 30px;
+  box-shadow: 0 6px 20px rgba(0, 80, 255, 0.15);
+  transition: all 0.3s ease;
+  width: 85%;
+  max-width: 600px;
+}
+
+.questions-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 80, 255, 0.25);
+  background: linear-gradient(135deg, #f8fbff, #d9e8ff);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.text h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #002855;
+}
+
+.text p {
+  font-size: 0.95rem;
+  color: #004080;
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+.chatto-card {
+  transition: all 0.4s ease;
+}
+
+.chatto-card.active {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(0, 140, 255, 0.5);
+}
+
+.start-btn {
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 120, 255, 0.3);
+}
+
+
+
+
+
+/* ? `################################################## */
+
+
+
+/* ===== تأثير نيون أزرق دائم للينكات ===== */
+.path-card ,
+.subject-card  {
+  text-decoration: none; /* يشيل الخط */
+  color: #065a77; /* أزرق نيون */
+  font-weight: 600;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  text-shadow: 0 0 8px #00bfff, 0 0 15px #00bfff55;
+}
+
+/* ✨ لمعة متحركة خفيفة */
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 5px #00bfff, 0 0 15px #00bfff55;
+  }
+  50% {
+    text-shadow: 0 0 15px #00bfff, 0 0 30px #00bfffaa;
+  }
+  100% {
+    text-shadow: 0 0 5px #00bfff, 0 0 15px #00bfff55;
+  }
+}
+
+/* 🔥 تفعيل الحركة */
+.path-card 
+.subject-card  {
+  animation: neonPulse 2.5s infinite ease-in-out;
+}
+
+/* 💥 تأثير عند المرور */
+.path-card a:hover,
+.subject-card a:hover {
+  color: #00d0ff;
+  text-shadow: 0 0 20px #00d0ff, 0 0 40px #00d0ff;
+  transform: scale(1.05);
+}
+
+
+
+
+.mohamed{
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #007bff; /* اللون الأزرق */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.start-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.start-btn:active {
+  transform: translateY(1px);
+}

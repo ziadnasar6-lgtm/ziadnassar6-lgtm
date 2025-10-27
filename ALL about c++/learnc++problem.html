@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔥 C++ Problem Solving Path 🔥</title>
+  <link rel="stylesheet" href="learnc++problem.css" />
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <h1>🔥 Problem Solving Path 🔥</h1>
+  </nav>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar"><br> <br> <br> 
+    <h2>Profile</h2>
+    <p><strong>Name:</strong> Ziad Ahmed</p>
+    <p><strong>Level:</strong> Fire Beginner</p>
+    <p><strong>Power:</strong> 🔥 87%</p>
+
+    <h3>🔥 Progress 🔥</h3>
+    <div class="progress-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="nav-links">
+      <div class="zoz"> 
+        <a href=    "E:\TSHATOO\html\All about main page\main_one.html "> Home(main page 🏠)</a> <br><br><br>
+      </div>
+      <div class="zoz2"> 
+        <a href="E:\TSHATOO\html\ALL about Tshatto\Tshatoo.html"> Ask Tshato 💬</a> <br><br><br>
+      </div>
+      <div class="zoz3"> 
+        <a href="#"> Contact</a> <br><br><br>
+      </div>
+    </div>
+<div class="zoz_four "> 
+<a href="online_compiler.html" target="_blank">Tshato_CO</a>
+</div>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content">
+    <section class="fire-path">
+      <div class="circles-container">
+        <!-- JS هيحط الدواير -->
+      </div>
+    </section>
+
+    <!-- ===== LESSON BOX ===== -->
+    <section class="lesson-section">
+      <div class="lesson-box">
+        <h2 id="lesson-title">🎯 Lesson Title</h2>
+        <p id="lesson-desc">Lesson description will appear here...</p>
+       <div class="Watch">  <a id="lesson-link" href="#" target="_blank">📺 Watch Lesson</a> </div>
+        <p id="lesson-task">🧩 Task: Solve this problem!</p>
+        <textarea id="code-editor" placeholder="Write your code here..."></textarea>
+        <button id="submit-btn">Submit</button>
+
+        <div id="result-box" class="hidden">
+          <p id="result-message"></p>
+          <pre id="correct-solution"></pre>
+          <button id="done-btn" class="hidden">Done ✅</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== JS ===== -->
+  <script>
+    // توليد 30 دايرة 🔥
+    const container = document.querySelector(".circles-container");
+    for (let i = 1; i <= 30; i++) {
+      const div = document.createElement("div");
+      div.className = "fire-circle" + (i === 1 ? " active" : " locked");
+      div.dataset.lesson = i;
+      div.textContent = "🔥 " + i;
+      container.appendChild(div);
+    }
+
+    // تحميل البيانات لما يضغط المستخدم
+    document.querySelectorAll(".fire-circle").forEach(circle => {
+      circle.addEventListener("click", () => {
+        if (circle.classList.contains("locked")) return;
+
+        document.querySelectorAll(".fire-circle").forEach(c => c.classList.remove("active"));
+        circle.classList.add("active");
+
+        const num = parseInt(circle.dataset.lesson);
+        loadLesson(num);
+
+        // حركة بسيطة عند الضغط
+        circle.animate(
+          [
+            { transform: "scale(1)", boxShadow: "0 0 0px red" },
+            { transform: "scale(1.2)", boxShadow: "0 0 25px orange" },
+            { transform: "scale(1)", boxShadow: "0 0 0px red" }
+          ],
+          { duration: 400, easing: "ease-in-out" }
+        );
+
+        // ينزل تلقائيًا للصندوق
+        const targetSection = document.querySelector(".lesson-section");
+        if (targetSection) targetSection.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+
+  <script src="learnc++problem.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

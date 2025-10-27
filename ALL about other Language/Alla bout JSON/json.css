@@ -1,0 +1,427 @@
+
+
+
+
+
+/* 🌍 إعداد عام */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #001933, #000);
+  color: #e6f0ff;
+  overflow-x: hidden;
+}
+
+/* 🔹 Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  background: linear-gradient(90deg, #002266, #0044cc);
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 0 20px #3399ff;
+  text-align: center;
+  letter-spacing: 1px;
+  z-index: 10;
+}
+
+/* 🔸 Layout */
+.container {
+  display: flex;
+  flex: 1;
+}
+
+/* 🔹 Sidebar */
+.sidebar {
+  width: 250px;
+  background: rgba(0, 10, 30, 0.9);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 2px solid #0066ff;
+  box-shadow: 0 0 15px #3399ff;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.sidebar h2 {
+  color: #66aaff;
+  text-shadow: 0 0 10px #3399ff;
+  margin-bottom: 10px;
+}
+
+.sidebar p {
+  margin: 6px 0;
+  color: #cce5ff;
+}
+
+.progress-section h3 {
+  color: #66ccff;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #00264d;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 25%;
+  background: #3399ff;
+  transition: width 0.5s ease;
+}
+
+/* 🔸 Sidebar Buttons */
+.sidebar-buttons {
+  margin-top: 25px;
+}
+
+.side-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, #00264d, #003366);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #3399ff;
+}
+
+.side-btn:hover {
+  background: linear-gradient(90deg, #004080, #000);
+  box-shadow: 0 0 20px #66ccff;
+  transform: scale(1.05);
+}
+
+/* 🔸 Rank Box */
+.rank-box {
+  background: rgba(0, 20, 40, 0.8);
+  border: 1px solid #3399ff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  color: #cce5ff;
+  box-shadow: 0 0 15px #0066ff inset;
+}
+
+/* The main content  */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: linear-gradient(180deg, #001933, #000);
+  margin-left: 260px;
+}
+
+.section-title {
+  color: #66b3ff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #3399ff;
+}
+
+/* 🔸 Lessons Grid */
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.lesson-card {
+  background: rgba(0, 25, 60, 0.8);
+  border: 1px solid #3399ff;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px #3399ff;
+  transition: 0.3s;
+}
+
+.lesson-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #66ccff;
+}
+
+/* 🔸 Lesson Details */
+.lesson-details {
+  margin-top: 40px;
+  background: rgba(0, 30, 60, 0.9);
+  border: 2px solid #3399ff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 0 20px #0066ff;
+}
+
+.watch-btn {
+  background: linear-gradient(90deg, #003366, #0044cc);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #3399ff;
+}
+
+.watch-btn:hover {
+  background: linear-gradient(90deg, #0044cc, #3399ff);
+  box-shadow: 0 0 20px #66ccff;
+}
+
+.lesson-desc {
+  margin-top: 15px;
+  color: #e0f2ff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 🔹 Quiz Section */
+.quiz-section {
+  margin-top: 30px;
+}
+
+/* ✅ إعدادات الكويز (رجعت لشكلها الأصلي بالأزرق) */
+.quiz-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(0, 20, 60, 0.85);
+  color: #e6f0ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 0 10px rgba(0, 120, 255, 0.4);
+  border: 1px solid #3399ff;
+}
+
+.quiz-settings select {
+  background: #001a33;
+  color: #66b3ff;
+  border: 1px solid #3399ff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0, 90, 255, 0.3);
+}
+
+.quiz-settings select:hover {
+  background: #002b66;
+  border-color: #66ccff;
+  box-shadow: 0 0 15px #3399ff;
+  transform: scale(1.02);
+}
+
+.quiz-settings select:focus {
+  border-color: #66ccff;
+  box-shadow: 0 0 20px #66ccff;
+}
+
+.quiz-btn {
+  background: rgba(0, 30, 60, 0.8);
+  border: 1px solid #3399ff;
+  color: white;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quiz-btn:hover {
+  background: #0066ff;
+  color: #fff;
+}
+
+.start-btn {
+  background: linear-gradient(90deg, #003366, #0066ff);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 25px;
+  margin-top: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #3399ff;
+}
+
+.start-btn:hover {
+  background: linear-gradient(90deg, #0044cc, #3399ff);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #66ccff;
+}
+
+/* 🔹 Footer */
+.footer {
+  background: #001933;
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #3399ff;
+  box-shadow: 0 -5px 15px #0066ff;
+}
+
+.footer a {
+  color: #66b3ff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: white;
+  text-shadow: 0 0 10px #3399ff;
+}
+
+/* ✅ تصميم المربعات */
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.lesson-box {
+  background: rgba(0, 20, 50, 0.7);
+  border: 2px solid #3399ff;
+  box-shadow: 0 0 15px #0066ff;
+  border-radius: 15px;
+  padding: 20px;
+  color: #e6f0ff;
+  text-align: center;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.lesson-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #66ccff;
+  cursor: pointer;
+}
+
+.lesson-box h3 {
+  margin-bottom: 10px;
+  color: #66b3ff;
+  font-size: 1.2em;
+}
+
+.lesson-box p {
+  font-size: 0.95em;
+  opacity: 0.9;
+}
+
+.lock-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.3em;
+  color: #99ccff;
+}
+
+/* ===== Sidebar Links ===== */
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.side-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background: #002b80;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #3399ff;
+  transition: all 0.3s ease;
+}
+
+.side-link:hover {
+  background: #0066ff;
+  color: #000;
+  box-shadow: 0 0 25px #000000, 0 0 10px #66ccff inset;
+  transform: scale(1.05);
+}
+
+.side-link:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 10px #3399ff inset;
+}
+
+
+
+
+
+
+
+
+
+
+/* 🎨 تنسيق نظام الرانك */
+#rank-section {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+#rank-title {
+  font-size: 1.2rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+#stars-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.star.active {
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffae00;
+}
+
+
+

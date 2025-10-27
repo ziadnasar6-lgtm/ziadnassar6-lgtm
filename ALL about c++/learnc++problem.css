@@ -1,0 +1,261 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #001a33, #000);
+  color: white;
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #0066ff, #00ccff);
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 0 20px #00aaff;
+  z-index: 1000;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 240px;
+  background: rgba(0, 10, 25, 0.9);
+  border-right: 2px solid #0099ff;
+  padding: 20px;
+  height: calc(100vh - 70px);
+  box-shadow: 0 0 15px #0077ff;
+}
+
+.sidebar h2 {
+  color: #00ccff;
+  text-shadow: 0 0 10px #0099ff;
+}
+
+.sidebar p, .sidebar a {
+  color: #fff;
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #00aaff;
+  text-shadow: 0 0 10px #33ccff;
+}
+
+/* Progress Dots */
+.progress-dots {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #333;
+  box-shadow: 0 0 5px #000;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #00aaff;
+  box-shadow: 0 0 10px #33ccff, 0 0 20px #0099ff;
+}
+
+/* ========== MAIN CONTENT ========== */
+.main-content {
+  margin-left: 260px;
+  margin-top: 100px;
+  width: calc(100% - 260px);
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+/* ========== FIRE CIRCLES ========== */
+.circles-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  justify-items: center;
+  padding: 40px;
+}
+
+.fire-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #001133, #003366);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #66ccff;
+  box-shadow: 0 0 15px #0077ff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.fire-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #33ccff, 0 0 40px #0099ff;
+}
+
+.fire-circle.active {
+  background: radial-gradient(circle, #0099ff, #003366);
+  box-shadow: 0 0 35px #33ccff, 0 0 50px #0099ff;
+  color: white;
+}
+
+.fire-circle.locked {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ========== LESSON BOX ========== */
+.lesson-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.lesson-box {
+  background: rgba(0, 0, 20, 0.8);
+  border: 2px solid #0099ff;
+  padding: 30px;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #0077ff;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.lesson-box h2 {
+  color: #33ccff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 15px #0099ff;
+}
+
+.lesson-box a {
+  color: #66ccff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.lesson-box a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 15px #33ccff;
+}
+
+.lesson-box textarea {
+  width: 100%;
+  height: 180px;
+  background: #000d1a;
+  color: #fff;
+  border: 1px solid #0099ff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 15px;
+  resize: none;
+  outline: none;
+  box-shadow: inset 0 0 10px #003366;
+}
+
+.lesson-box button {
+  background: linear-gradient(90deg, #0066ff, #00ccff);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+  transition: 0.3s;
+  box-shadow: 0 0 20px #0099ff;
+}
+
+.lesson-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #33ccff, 0 0 35px #0099ff;
+}
+
+/* Result Box */
+#result-box {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(0, 10, 25, 0.7);
+  box-shadow: inset 0 0 15px #002244;
+}
+
+.hidden {
+  display: none;
+}
+
+#result-message {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+#correct-solution {
+  background: #000d1a;
+  color: #aaddff;
+  padding: 10px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  box-shadow: inset 0 0 10px #002244;
+  border: 1px solid #0099ff;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.zoz, .zoz2, .zoz3, .zoz_four, .Watch {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(90deg, #0044cc, #0099ff);
+  color: white;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 153, 255, 0.6);
+  transition: all 0.3s ease;
+  margin: 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.zoz:hover, .zoz2:hover, .zoz3:hover, .zoz_four:hover, .Watch:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #00ccff, #0077ff);
+  box-shadow: 0 0 25px rgba(0, 204, 255, 0.9);
+  text-shadow: 0 0 8px #66ccff;
+}
+
+.zoz:active, .zoz2:active, .zoz3:active, .zoz_four:active, .Watch:active {
+  transform: scale(0.96);
+}

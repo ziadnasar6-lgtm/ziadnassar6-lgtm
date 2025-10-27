@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: url('https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-blue-night-sky-clouds-stars-quiet-background-backgroundnight-backgroundstarry-backgroundstar-image_85722.jpg')
+        no-repeat center center/cover;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 30, 80, 0.35);
+      backdrop-filter: blur(3px);
+      animation: wave 12s infinite alternate ease-in-out;
+    }
+
+    @keyframes wave {
+      0% { backdrop-filter: blur(3px) brightness(1); }
+      100% { backdrop-filter: blur(5px) brightness(1.2); }
+    }
+
+    .login-container {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 0 40px rgba(0, 150, 255, 0.4);
+      border-radius: 20px;
+      padding: 40px 50px;
+      width: 380px;
+      color: #fff;
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInUp {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+      text-shadow: 0 0 8px #00aaff;
+    }
+
+    label { display: block; margin-top: 10px; font-size: 14px; color: #e0e0e0; }
+
+    input {
+      width: 100%; padding: 12px 15px; margin: 10px 0;
+      border: none; border-radius: 10px;
+      background: rgba(255, 255, 255, 0.85);
+      font-size: 15px; color: #333; outline: none; transition: 0.3s;
+    }
+
+    input:focus { box-shadow: 0 0 10px #00aaff; }
+
+    .login-btn {
+      width: 100%;
+      background: linear-gradient(90deg, #007bff, #00ccff);
+      color: #fff; padding: 12px; border: none;
+      border-radius: 10px; cursor: pointer; font-size: 16px;
+      font-weight: 600; transition: 0.4s; margin-top: 10px;
+    }
+
+    .login-btn:hover { box-shadow: 0 0 25px rgba(0, 200, 255, 0.7); transform: scale(1.03); }
+
+    .back-btn {
+      width: 100%; background: transparent; color: #aee6ff;
+      padding: 12px; border: 2px solid #66d9ff;
+      border-radius: 10px; cursor: pointer; font-size: 16px;
+      font-weight: 600; margin-top: 10px; transition: 0.4s;
+    }
+
+    .back-btn:hover { background: rgba(0, 150, 255, 0.2); box-shadow: 0 0 15px rgba(0, 200, 255, 0.6); transform: scale(1.03); }
+
+    .extra-links { margin-top: 15px; text-align: center; font-size: 14px; color: #fff; }
+
+    .extra-links a { color: #aee6ff; text-decoration: none; }
+    .extra-links a:hover { text-decoration: underline; }
+
+    #message {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <form id="loginForm">
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Enter password" required />
+
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <p id="message"></p>
+
+    <button class="back-btn" onclick="window.location.href='register.html'">
+      Don't have an account? Sign Up
+    </button>
+
+    <div class="extra-links">
+      <a href="#">Forgot Password?</a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</body>
+</html>
