@@ -30,7 +30,7 @@ I’m passionate about **clean design**, **creative UI**, and building cool web 
 It’s designed with a futuristic style and neon energy ⚡  
 
 <p align="center">
-  <img src="https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/matrix.gif" width="600px" alt="Code Battle Arena Preview"/>
+  <img src="https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/matrix.gif" width="500px" alt="Code Battle Arena Preview"/>
 </p>
 
 🔗 *Repository coming soon... stay tuned!*  
@@ -59,5 +59,5 @@ It’s designed with a futuristic style and neon energy ⚡
 <h3 align="center">✨ "Code. Create. Conquer." ✨</h3>
 
 <p align="center">
-  <img src="https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/matrix.gif" width="100%">
+  <img src="https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/matrix.gif" width="40%">
 </p>
