@@ -5,166 +5,212 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Battle Arena - Lobby</title>
   <link rel="stylesheet" href="battel_one_pro.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
 
-    body {
-      background: radial-gradient(circle at center, #000010 0%, #000 100%);
-      overflow: hidden;
-      color: #00bfff;
-      height: 100vh;
-      display: flex;
-    }
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
 
-    /* 🔹 Navbar */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      background: rgba(0, 0, 0, 0.8);
-      border-bottom: 1px solid #00bfff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-      z-index: 10;
-    }
+  body {
+    background: radial-gradient(circle at center, #000010 0%, #000 100%);
+    overflow-x: hidden;
+    color: #00bfff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .navbar h1 {
-      font-size: 1.5rem;
-      color: #00bfff;
-      text-shadow: 0 0 10px #00bfff;
-    }
+  /* 🔹 Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #00bfff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    z-index: 10;
+  }
 
-    .sound-controls button {
-      background: none;
-      border: 1px solid #00bfff;
-      color: #00bfff;
-      margin-left: 10px;
-      padding: 5px 10px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+  .navbar h1 {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff;
+  }
 
-    .sound-controls button:hover {
-      background: #00bfff;
-      color: black;
-    }
+  .sound-controls button {
+    background: none;
+    border: 1px solid #00bfff;
+    color: #00bfff;
+    margin-left: 1vw;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+  }
 
-    /* 🔹 Sidebar */
+  .sound-controls button:hover {
+    background: #00bfff;
+    color: black;
+  }
+
+  /* 🔹 Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 8vh;
+    left: 0;
+    width: clamp(180px, 20vw, 220px);
+    height: calc(100vh - 8vh);
+    background: rgba(0, 0, 0, 0.7);
+    border-right: 1px solid #00bfff;
+    padding: 2vh 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 5;
+  }
+
+  .player-info {
+    line-height: 1.8;
+  }
+
+  .player-info span {
+    display: block;
+    color: #00bfff;
+    text-shadow: 0 0 8px #00bfff;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+  }
+
+  /* 🔹 Main Content */
+  .main-content {
+    margin-left: clamp(180px, 20vw, 240px);
+    margin-top: 10vh;
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    padding: 0 2vw;
+  }
+
+  .mode-select {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(15px, 3vw, 40px);
+    margin-top: clamp(80px, 10vh, 150px);
+  }
+
+  .mode {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #00bfff;
+    border-radius: 15px;
+    padding: clamp(20px, 4vh, 40px);
+    width: clamp(160px, 25vw, 220px);
+    cursor: pointer;
+    box-shadow: 0 0 20px #00bfff;
+    transition: 0.3s;
+    color: white;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  }
+
+  .mode:hover {
+    background: #00bfff;
+    color: black;
+    transform: scale(1.05);
+  }
+
+  /* 🔹 Chat Box */
+  .chat-box {
+    position: absolute;
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(250px, 60%, 700px);
+    background: rgba(10, 11, 11, 0.7);
+    border: 1px solid #00bfff;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .chat-box input {
+    flex: 1;
+    background: black;
+    border: 1px solid #00bfff;
+    color: #00bfff;
+    padding: 8px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+
+  .chat-box button {
+    background: #00bfff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+  }
+
+  /* 🔹 Smoke Effect */
+  canvas#smokeCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* 📱 ميديا للموبايل */
+  @media (max-width: 768px) {
     .sidebar {
-      position: fixed;
-      top: 60px;
-      left: 0;
-      width: 220px;
-      height: calc(100% - 60px);
-      background: rgba(0, 0, 0, 0.7);
-      border-right: 1px solid #00bfff;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      z-index: 5;
-    }
-
-    .player-info {
-      line-height: 1.8;
-    }
-
-    .player-info span {
-      display: block;
-      color: #00bfff;
-      text-shadow: 0 0 8px #00bfff;
-    }
-
-    /* 🔹 Main Content */
-    .main-content {
-      margin-left: 240px;
-      margin-top: 70px;
-      flex: 1;
-      text-align: center;
       position: relative;
-      z-index: 3;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid #00bfff;
+      flex-direction: row;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .main-content {
+      margin: 0;
+      padding-top: 12vh;
     }
 
     .mode-select {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 150px;
+      margin-top: 8vh;
+      gap: 20px;
     }
 
-    .mode {
-      background: rgba(0, 0, 0, 0.6);
-      border: 2px solid #00bfff;
-      border-radius: 15px;
-      padding: 40px;
-      width: 220px;
-      cursor: pointer;
-      box-shadow: 0 0 20px #00bfff;
-      transition: 0.3s;
-    }
-
-    .mode:hover {
-      background: #00bfff;
-      color: black;
-      transform: scale(1.05);
-    }
-
-    /* 🔹 Chat Box */
     .chat-box {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60%;
-      background: rgba(10, 11, 11, 0.7);
-      border: 1px solid #00bfff;
-      border-radius: 15px;
-      padding: 10px;
+      width: 90%;
     }
+  }
+</style>
 
-    .chat-box input {
-      width: 80%;
-      background: black;
-      border: 1px solid #00bfff;
-      color: #00bfff;
-      padding: 8px;
-      border-radius: 10px;
-    }
 
-    .chat-box button {
-      background: #00bfff;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 8px;
-      cursor: pointer;
-      color: black;
-      font-weight: bold;
-      margin-left: 5px;
-    }
 
-    /* 🔹 Smoke Effect (Canvas) */
-    
-    canvas#smokeCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
-    }
 
-  </style>
+
+
+
+
+
 </head>
 <body>
 

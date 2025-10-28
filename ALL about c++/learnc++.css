@@ -1,24 +1,23 @@
-  
-
-  /* --- Reset & Global Styles --- */
+/* 🌍 Reset & Global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
 body {
   background: linear-gradient(to bottom, #0a0a12, #001f3f, #0044cc);
   color: #f1f1f1;
   display: flex;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;   /* بدل height بـ min-height */
+  overflow-x: hidden;  /* بس نخفي الاتجاه الأفقي */
+  overflow-y: auto;    /* نخلي الصفحة تقدر تنزل لتحت */
 }
 
-/* --- Sidebar --- */
+/* 📁 Sidebar */
 .sidebar {
-  width: 250px;
+  width: 17vw;
+  min-width: 200px;
   flex-shrink: 0;
   position: fixed;
   left: 0;
@@ -26,102 +25,92 @@ body {
   height: 100%;
   background: rgba(10, 15, 30, 0.85);
   backdrop-filter: blur(10px);
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(0, 100, 255, 0.3);
-  border-right: 2px solid rgba(0, 140, 255, 0.4);
+  padding: 2vh 1vw;
+  box-shadow: 0 0 1vw rgba(0, 100, 255, 0.3);
+  border-right: 0.2vw solid rgba(0, 140, 255, 0.4);
 }
 
 .rank-title {
   text-align: center;
   color: #66aaff;
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
   text-shadow: 0 0 8px #007bff;
-}
-
-.rank-list {
-  list-style: none;
 }
 
 .rank-item {
   background: rgba(0, 50, 120, 0.5);
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 10px;
+  margin: 1vh 0;
+  padding: 1vh;
+  border-radius: 1vw;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s;
-  border: 1px solid transparent;
 }
 
 .rank-item:hover {
   border: 1px solid #66aaff;
-  box-shadow: 0 0 15px #007bff;
+  box-shadow: 0 0 1vw #007bff;
   transform: scale(1.05);
 }
 
-/* --- Rank Popup --- */
+/* 🧩 Popup */
 .rank-popup {
   display: none;
-  position: relative;
   background: rgba(0, 10, 30, 0.9);
-  border-radius: 12px;
-  border: 1.5px solid #007bff;
-  box-shadow: 0 0 15px #008cff;
+  border-radius: 1vw;
+  border: 0.15vw solid #007bff;
+  box-shadow: 0 0 1vw #008cff;
   width: 90%;
-  margin: 15px auto 0;
-  padding: 15px;
+  margin: 2vh auto 0;
+  padding: 2vh;
 }
-
 .rank-popup.active {
   display: block;
 }
 
 .close-btn {
   position: absolute;
-  top: 5px;
-  right: 8px;
+  top: 0.5vh;
+  right: 1vw;
   cursor: pointer;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
-.close-btn:hover {
-  color: #66aaff;
-}
-
-/* --- Main Content --- */
+/* 📦 Main Content */
 .main-content {
-  margin-left: 250px;
-  width: calc(100% - 250px);
-  padding: 40px;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  margin-left: 17vw;
+  width: calc(100% - 17vw);
+  padding: 4vh 3vw;
+  min-height: 100vh;   /* بدل height بـ min-height */
+  overflow-x: hidden;  /* خليك على ده بس */
+  margin-top: 60px;
 }
+
 
 .page-title {
   text-align: center;
   color: #99cfff;
-  margin-bottom: 40px;
+  margin-bottom: 4vh;
   text-shadow: 0 0 10px #007bff;
 }
 
-/* --- Course Boxes --- */
+/* 🧱 Course Boxes */
 .course-box {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 25px;
+  border-radius: 1vw;
+  padding: 2vh 2vw;
+  margin-bottom: 2vh;
   border: 1px solid rgba(0, 100, 255, 0.5);
-  box-shadow: 0 0 20px rgba(0, 120, 255, 0.3);
+  box-shadow: 0 0 1vw rgba(0, 120, 255, 0.3);
   transition: all 0.3s ease-in-out;
 }
 
 .course-box:hover {
   background: rgba(0, 60, 120, 0.4);
-  box-shadow: 0 0 25px #007bff, inset 0 0 10px #007bff;
-  transform: translateY(-5px);
+  box-shadow: 0 0 1vw #007bff, inset 0 0 0.5vw #007bff;
+  transform: translateY(-0.5vh);
 }
 
 .zozlink,
@@ -130,90 +119,65 @@ body {
   display: inline-block;
   background: linear-gradient(135deg, #5174de, #0b46bc90);
   color: white;
-  padding: 10px 20px;
-  border-radius: 15px;
+  padding: 0.8vh 1.5vw;
+  border-radius: 1vw;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 15px rgba(163, 164, 190, 0.6);
+  box-shadow: 0 0 1vw rgba(163, 164, 190, 0.6);
   transition: 0.3s ease;
   margin-left: 85%;
   text-decoration: none;
 }
 
-/* --- C++ Info Section --- */
+/* 🧠 C++ Section */
 .cpp-section {
-  margin-top: 40px;
+  margin-top: 4vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.cpp-section h2 {
-  color: #7ec8ff;
-  text-shadow: 0 0 8px #00aaff;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
 .cpp-box {
   background: rgba(255, 255, 255, 0.08);
-  border-radius: 15px;
+  border-radius: 1vw;
   border: 1px solid rgba(0, 100, 255, 0.4);
-  box-shadow: 0 0 20px rgba(0, 120, 255, 0.3);
-  padding: 20px;
+  box-shadow: 0 0 1vw rgba(0, 120, 255, 0.3);
+  padding: 2vh 2vw;
   width: 90%;
   max-width: 950px;
-  height: 250px;
+  height: 30vh;
   overflow-y: auto;
   line-height: 1.6;
   color: #dce9ff;
 }
 
-.cpp-box::-webkit-scrollbar {
-  width: 6px;
-}
-.cpp-box::-webkit-scrollbar-thumb {
-  background: #007bff;
-  border-radius: 10px;
-}
-.cpp-box::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-
-
-
-
-
-/* ====== Navbar Style ====== */
+/* ===== Navbar ===== */
 .navbar {
   position: fixed;
   top: 0;
-  left: 250px; /* لأن عندك sidebar ثابت بعرض 250px */
-  width: calc(100% - 250px);
-  height: 60px;
+  left: 17vw;
+  width: calc(100% - 17vw);
+  height: 8vh;
   background: rgba(10, 15, 30, 0.85);
   backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(0, 140, 255, 0.4);
-  box-shadow: 0 0 15px rgba(0, 100, 255, 0.3);
+  border-bottom: 0.2vw solid rgba(0, 140, 255, 0.4);
+  box-shadow: 0 0 1vw rgba(0, 100, 255, 0.3);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0 3vw;
   z-index: 1000;
 }
 
-/* اللوجو */
 .navbar .logo {
   color: #66aaff;
   font-size: 1.4rem;
   text-shadow: 0 0 10px #007bff;
 }
 
-/* روابط النافبار */
 .navbar-right {
   display: flex;
-  gap: 25px;
+  gap: 2vw;
 }
 
 .nav-link {
@@ -228,10 +192,139 @@ body {
   text-shadow: 0 0 8px #007bff;
 }
 
-/* خلي المحتوى الرئيسي يبدأ بعد النافبار */
-.main-content {
-  margin-top: 60px; /* ✅ عشان المحتوى ما يختفيش ورا النافبار */
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 20vw;
+  }
+  .main-content {
+    margin-left: 20vw;
+  }
+  .navbar {
+    left: 20vw;
+    width: calc(100% - 20vw);
+  }
 }
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 140, 255, 0.4);
+  }
+  .navbar {
+    left: 0;
+    width: 100%;
+    height: 7vh;
+  }
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 2vh 3vw;
+  }
+  .zozlink,
+  .zozlink_two,
+  .zozlink_three {
+    margin-left: 0;
+    display: block;
+    text-align: center;
+    margin-top: 1vh;
+  }
+  .cpp-box {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .rank-title {
+    font-size: 1.2rem;
+  }
+  .navbar .logo {
+    font-size: 1.1rem;
+  }
+  .navbar-right {
+    gap: 1.5vw;
+  }
+  .zozlink {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+/* ✨ تأثير إضاءة للأزرار */
+.zozlink,
+.zozlink_two,
+.zozlink_three {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.zozlink::after,
+.zozlink_two::after,
+.zozlink_three::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: all 0.7s ease;
+}
+
+.zozlink:hover::after,
+.zozlink_two:hover::after,
+.zozlink_three:hover::after {
+  left: 100%;
+}
+
+/* 🔥 وميض خفيف مع الظل */
+.zozlink:hover,
+.zozlink_two:hover,
+.zozlink_three:hover {
+  box-shadow: 0 0 20px rgba(0, 140, 255, 0.8), 0 0 40px rgba(0, 100, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* 🌟 عناوين تتوهج */
+.page-title,
+.rank-title,
+.cpp-section h2 {
+  animation: glowText 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #007bff, 0 0 20px #008cff, 0 0 30px #00aaff;
+    color: #a8d4ff;
+  }
+  to {
+    text-shadow: 0 0 20px #00aaff, 0 0 35px #33bbff, 0 0 50px #66ccff;
+    color: #ffffff;
+  }
+}
+
+/* 🌌 تأثير خفيف للعناصر المهمة */
+.course-box:hover {
+  box-shadow: 0 0 25px rgba(0, 150, 255, 0.9), inset 0 0 10px rgba(0, 150, 255, 0.6);
+  background: rgba(0, 50, 100, 0.5);
+}
+
 
 
 

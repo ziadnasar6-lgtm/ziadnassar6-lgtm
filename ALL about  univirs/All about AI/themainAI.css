@@ -1,4 +1,6 @@
-/* General Reset */
+
+
+/* 🌐 General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,20 +8,21 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Layout */
+/* 🧭 Layout */
 body {
   display: flex;
   background-color: #f5f3ef;
   min-height: 100vh;
   overflow-y: auto;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
 }
 
-/* Sidebar */
+/* 🧱 Sidebar */
 .sidebar {
-  width: 15.6rem; /* 250px */
+  width: 15vw;
   background-color: #1e1e2f;
   color: #fff;
-  padding: 1.25rem; /* 20px */
+  padding: 1.5vw;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -30,20 +33,21 @@ body {
 
 .sidebar h2 {
   text-align: center;
-  margin-bottom: 0.6rem; /* 10px */
+  margin-bottom: 0.8rem;
+  font-size: clamp(1rem, 1.3vw, 1.4rem);
 }
 
 .sidebar-links {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem; /* 15px */
-  margin-top: 1.25rem; /* 20px */
+  gap: 1rem;
+  margin-top: 1.2rem;
 }
 
 .sidebar-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem; /* 16px */
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
   transition: 0.3s;
 }
 
@@ -51,43 +55,45 @@ body {
   color: #f9b233;
 }
 
-/* Main Content */
+/* 🧾 Main Content */
 .content {
-  margin-left: 15.6rem; /* 250px */
-  padding: 2.5rem; /* 40px */
-  width: calc(100% - 15.6rem);
+  margin-left: 15vw;
+  padding: 3vw;
+  width: calc(100% - 15vw);
 }
 
-/* Intro Box */
+/* 💬 Intro Box */
 .intro-box {
   background-color: #fff;
-  padding: 1.56rem; /* 25px */
-  border-radius: 0.9rem; /* 15px */
-  box-shadow: 0 0.12rem 0.5rem rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.9rem; /* 30px */
-  max-height: 15.6rem; /* 250px */
+  padding: 2vw;
+  border-radius: 1vw;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2vw;
+  max-height: 35vh;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #f9b233 #fff;
 }
 
 .intro-box h1 {
-  margin-bottom: 0.6rem; /* 10px */
+  margin-bottom: 1rem;
+  font-size: clamp(1.3rem, 2vw, 2rem);
   color: #333;
 }
 
 .intro-buttons {
-  margin-top: 1rem; /* 15px */
+  margin-top: 1rem;
   display: flex;
-  gap: 0.6rem; /* 10px */
+  gap: 0.8rem;
 }
 
 .intro-buttons button {
   background-color: #f9b233;
   border: none;
   color: #fff;
-  padding: 0.5rem 0.75rem; /* 8px 12px */
-  border-radius: 0.5rem; /* 8px */
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -96,35 +102,35 @@ body {
   background-color: #e0a025;
 }
 
-/* Divider */
+/* 🧩 Divider */
 .divider {
-  height: 0.12rem; /* 2px */
+  height: 0.15rem;
   background-color: #ddd;
-  margin: 1.25rem 0; /* 20px */
+  margin: 2vw 0;
 }
 
-/* Branches */
+/* 🌿 Branches */
 .branches {
   background-color: #fff;
-  padding: 1.56rem; /* 25px */
-  border-radius: 0.9rem;
-  box-shadow: 0 0.12rem 0.5rem rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.9rem;
+  padding: 2vw;
+  border-radius: 1vw;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2vw;
 }
 
 .branch-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem; /* 20px */
-  margin-top: 1rem; /* 15px */
+  gap: 2vw;
+  margin-top: 1rem;
 }
 
 .branch {
-  flex: 1 1 18.75rem; /* 300px */
+  flex: 1 1 25rem;
   background-color: #f9f9f9;
-  padding: 0.9rem; /* 15px */
-  border-radius: 0.75rem; /* 12px */
-  box-shadow: 0 0.06rem 0.3rem rgba(0, 0, 0, 0.05);
+  padding: 1.5vw;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.15rem 0.4rem rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
 }
 
@@ -135,27 +141,29 @@ body {
 .branch h3 {
   color: #222;
   margin-bottom: 0.5rem;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
 }
 
-/* Course Cards */
+/* 🎓 Course Cards */
 .courses {
   background-color: #fff;
-  padding: 1.56rem;
-  border-radius: 0.9rem;
-  box-shadow: 0 0.12rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 2vw;
+  border-radius: 1vw;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
 }
 
 .courses h2 {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.2rem, 1.8vw, 1.8rem);
   color: #333;
 }
 
 .course-card {
   background-color: #f9f9f9;
-  border-radius: 0.9rem;
-  padding: 1.25rem;
-  box-shadow: 0 0.12rem 0.5rem rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.9rem;
+  border-radius: 1rem;
+  padding: 1.5vw;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
   transition: transform 0.3s ease;
 }
 
@@ -166,20 +174,22 @@ body {
 .course-card h3 {
   color: #222;
   margin-bottom: 0.5rem;
+  font-size: clamp(1rem, 1.3vw, 1.4rem);
 }
 
 .course-card p {
   color: #555;
-  font-size: 0.9rem; /* 14px */
-  margin-bottom: 0.9rem;
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  margin-bottom: 1rem;
 }
 
 .start-btn {
   background-color: #f9b233;
   border: none;
   color: #fff;
-  padding: 0.6rem 1rem; /* 10px 15px */
-  border-radius: 0.6rem; /* 10px */
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -188,26 +198,26 @@ body {
   background-color: #e0a025;
 }
 
-/* Footer */
+/* ⚙️ Footer */
 footer {
   width: 100%;
   position: fixed;
   bottom: 0;
-  left: 15rem; /* 240px */
+  left: 15vw;
   background-color: #1e1e2f;
   color: #ddd;
   text-align: center;
-  padding: 0.9rem 0; /* 14px */
-  font-size: 0.9rem;
+  padding: 1rem 0;
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
-/* ZOZ Button */
+/* 🔸 ZOZ Button */
 .zoz {
   display: inline-block;
-  padding: 0.75rem 1.56rem;
+  padding: 0.8rem 1.5rem;
   background-color: #ff7b00;
   color: white;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
   font-weight: 600;
   text-decoration: none;
   border-radius: 0.5rem;
@@ -221,32 +231,33 @@ footer {
   transform: scale(1.05);
 }
 
-/* Sidebar Buttons */
+/* 🟡 Sidebar Buttons */
 .sidebar button {
   margin-top: 0.6rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.6rem 0.9rem;
   border: none;
   border-radius: 0.5rem;
   background-color: #f9b233;
   color: white;
   font-weight: 600;
   cursor: pointer;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
   transition: all 0.3s ease;
 }
 
-.sidebar button:hover {
+.sidebar button :hover {
   background-color: #e0a025;
   transform: scale(1.05);
 }
 
-/* Rank Message Box */
+/* 🏅 Rank Message */
 #rank-message {
   background-color: #2c2c3c;
   color: #fff;
   padding: 0.6rem;
   margin-top: 1rem;
   border-radius: 0.5rem;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1vw, 1rem);
   display: none;
 }
 
@@ -266,7 +277,7 @@ footer {
   }
 }
 
-/* Dark Mode */
+/* 🌙 Dark Mode */
 body.dark-mode {
   background-color: #1e1e2f;
   color: #eee;
@@ -288,60 +299,37 @@ body.dark-mode .start-btn {
   background-color: #f9b233;
 }
 
-.hidden {
-  display: none;
-}
-
-/* Responsive */
-@media (max-width: 64rem) { /* 1024px */
+/* 📱 Responsive Tweaks */
+@media (max-width: 64rem) {
   .sidebar {
-    width: 12.5rem; /* 200px */
-    padding: 0.9rem;
+    width: 18vw;
   }
-
   .content {
-    margin-left: 12.5rem;
-    padding: 1.56rem;
-    width: calc(100% - 12.5rem);
+    margin-left: 18vw;
   }
 }
 
-@media (max-width: 48rem) { /* 768px */
+@media (max-width: 48rem) {
   body {
     flex-direction: column;
   }
-
   .sidebar {
-    position: relative;
     width: 100%;
-    height: auto;
+    position: relative;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    height: auto;
   }
-
   .sidebar-links {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0.6rem;
+    gap: 1rem;
   }
-
   .content {
     margin-left: 0;
     width: 100%;
-    padding: 1.25rem;
   }
-
-  .intro-box,
-  .branches,
-  .courses {
-    padding: 0.9rem;
-  }
-
-  .branch {
-    flex: 1 1 100%;
-  }
-
   footer {
     position: relative;
     left: 0;
@@ -349,23 +337,8 @@ body.dark-mode .start-btn {
   }
 }
 
-@media (max-width: 30rem) { /* 480px */
-  .intro-box h1,
-  .branches h2,
-  .courses h2 {
-    font-size: 1.1rem;
-  }
 
-  .sidebar-links a {
-    font-size: 0.9rem;
-  }
 
-  .course-card {
-    padding: 0.9rem;
-  }
 
-  .start-btn {
-    padding: 0.5rem 0.6rem;
-    font-size: 0.8rem;
-  }
-}
+
+

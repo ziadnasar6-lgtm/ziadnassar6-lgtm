@@ -6,7 +6,7 @@ body {
   color: #e0e0e0;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* 🔥 Navbar */
@@ -14,9 +14,9 @@ body {
   background: linear-gradient(90deg, #00ffff, #0077ff);
   color: black;
   text-align: center;
-  font-size: 26px;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
   font-weight: bold;
-  padding: 18px;
+  padding: 1.2rem;
   box-shadow: 0 0 15px #00bfff;
   position: fixed;
   width: 100%;
@@ -28,59 +28,42 @@ body {
 .sidebar {
   position: fixed;
   left: 0;
-  top: 70px;
-  width: 240px;
-  height: calc(100% - 70px);
+  top: 9vh;
+  width: clamp(180px, 20vw, 240px);
+  height: calc(100vh - 9vh);
   background: rgba(0, 10, 20, 0.9);
   border-right: 2px solid #00bfff;
   box-shadow: 0 0 15px #00bfff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 4vh;
   z-index: 9;
 }
 
 .sidebar h2 {
   color: #00ffff;
-  margin-bottom: 30px;
+  margin-bottom: 3vh;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
 }
-/* 
-.sidebar-btn {
-  width: 150px;
-  margin: 10px 0;
-  padding: 10px;
-  background: linear-gradient(90deg, #00bfff, #0077ff);
-  border: none;
-  color: black;
-  font-weight: bold;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 0 10px #00bfff;
-}
-
-.sidebar-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #00ffff;
-} */
 
 /* 🧩 Language Boxes */
 .lang-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 130px;
-  margin-left: 200px;
-  gap: 30px;
+  margin-top: 12vh;
+  margin-left: clamp(160px, 22vw, 220px);
+  gap: clamp(15px, 3vw, 40px);
 }
 
 .lang-box {
-  width: 250px;
-  height: 120px;
+  width: clamp(160px, 25vw, 250px);
+  height: clamp(80px, 12vh, 120px);
   background: transparent;
   border: 2px solid #00bfff;
   color: #00ffff;
-  font-size: 28px;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,13 +85,13 @@ body {
 
 /* 🎯 Type Selector */
 #typeSelector {
-  margin: 50px auto;
+  margin: 6vh auto;
   text-align: center;
   width: fit-content;
   background: rgba(0, 10, 30, 0.7);
   border: 2px solid #00bfff;
   border-radius: 15px;
-  padding: 20px 40px;
+  padding: clamp(15px, 2vh, 25px) clamp(20px, 4vw, 40px);
   box-shadow: 0 0 20px #00bfff;
 }
 
@@ -119,9 +102,9 @@ body {
   color: #00ffff;
   border: 2px solid #00bfff;
   border-radius: 10px;
-  padding: 10px;
+  padding: clamp(8px, 1vh, 12px);
   margin: 10px;
-  font-size: 16px;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
   box-shadow: 0 0 10px #00bfff;
 }
 
@@ -131,14 +114,12 @@ body {
   box-shadow: 0 0 30px #00ffff;
 }
 
-
-
 /* ⏱ Timer */
 #timer {
   text-align: center;
-  font-size: 22px;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
   color: #00ffff;
-  margin-top: 15px;
+  margin-top: 2vh;
 }
 
 /* 🔥 Canvas دخان */
@@ -152,7 +133,7 @@ canvas {
   background: radial-gradient(circle at center, #000 0%, #01010f 100%);
 }
 
-
+/* ✅ Feedback */
 .feedback-correct {
   color: #00ff88;
   text-shadow: 0 0 8px #00ff88;
@@ -163,34 +144,30 @@ canvas {
   text-shadow: 0 0 8px #ff8080;
 }
 
-
-
-
-
-
-
-
-/* 🎯 Question Box Styling */
+/* 🎯 Question Box */
 #questionBox {
-  margin: 50px auto;
-  padding: 30px;
-  width: 75%;
-  min-height: 250px;
+  margin: 6vh auto;
+  padding: clamp(20px, 3vh, 30px);
+  width: clamp(250px, 75%, 900px);
+  min-height: clamp(200px, 30vh, 350px);
   background: rgba(0, 10, 25, 0.85);
   border: 3px solid #00bfff;
   border-radius: 25px;
   box-shadow: 0 0 40px #00bfff;
   color: #e0e0e0;
-  font-size: 18px;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
   text-align: center;
   animation: fadeIn 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
 }
 
 #questionText {
-  font-size: 22px;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
   color: #00ffff;
   text-shadow: 0 0 10px #00ffff;
-  margin-bottom: 25px;
+  margin-bottom: 2vh;
 }
 
 /* 🧩 MCQ Buttons */
@@ -198,7 +175,7 @@ canvas {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: clamp(8px, 1vh, 12px);
 }
 
 .mcq-options button {
@@ -207,8 +184,8 @@ canvas {
   border: 2px solid #00bfff;
   border-radius: 12px;
   color: #00ffff;
-  font-size: 18px;
-  padding: 12px;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  padding: clamp(8px, 1.2vh, 12px);
   cursor: pointer;
   transition: 0.3s ease;
   box-shadow: 0 0 10px #0077ff;
@@ -220,7 +197,7 @@ canvas {
   box-shadow: 0 0 25px #00ffff;
 }
 
-/* ✅ Correct / ❌ Wrong answers */
+/* ✅ Correct / ❌ Wrong */
 .mcq-options button.correct {
   background: rgba(0, 255, 100, 0.15);
   border-color: #00ff66;
@@ -236,56 +213,31 @@ canvas {
 }
 
 /* 💻 Code Input Area */
-
-/* 🧠 Question Box */
-#questionBox {
-  margin: 50px auto;
-  padding: 30px;
-  width: 70%;
-  margin-right: 20px;
-  min-height: 250px;
-  background: rgba(0, 10, 25, 0.85);
-  border: 3px solid #00bfff;
-  border-radius: 25px;
-  box-shadow: 0 0 40px #00bfff;
-  color: #e0e0e0;
-  font-size: 18px;
-  text-align: center;
-  animation: fadeIn 0.6s ease-in-out;
-  display: flex;           /* بدل display: none */
-  flex-direction: column;  /* لترتيب العناصر داخله عمودي */
-  z-index: 10;             /* عشان يظهر فوق الخلفيات والsidebar */
-
-}
-
-
 #codeInput {
   display: none;
   width: 80%;
-  height: 160px;
+  height: clamp(120px, 25vh, 160px);
   background: #000;
   color: #00ffff;
   font-family: monospace;
-  font-size: 16px;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
   border: 2px solid #00bfff;
   border-radius: 12px;
   padding: 10px;
   box-shadow: 0 0 15px #00bfff;
-  /* margin: 15px auto; */
+  margin: 0 auto;
   resize: vertical;
-  margin-left: 50px;
 }
-
 
 #submitCodeBtn {
   background: linear-gradient(90deg, #00ffff, #0077ff);
   border: none;
   color: black;
   font-weight: bold;
-  padding: 12px 25px;
+  padding: clamp(10px, 1.5vh, 15px) clamp(20px, 2.5vw, 25px);
   border-radius: 12px;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 2vh;
   transition: 0.3s;
   box-shadow: 0 0 20px #00bfff;
 }
@@ -297,8 +249,8 @@ canvas {
 
 /* 💬 Feedback */
 #feedback {
-  margin-top: 15px;
-  font-size: 18px;
+  margin-top: 1.5vh;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
   text-shadow: 0 0 8px #00ffff;
   color: #00ffff;
 }
@@ -315,13 +267,9 @@ canvas {
   }
 }
 
-
-
-
-
-
+/* 💯 Score Box */
 .score-box {
-  width: 180px;
+  width: clamp(140px, 20vw, 180px);
   background: rgba(0, 50, 100, 0.85);
   border: 2px solid #00bfff;
   border-radius: 12px;
@@ -331,7 +279,7 @@ canvas {
   font-weight: bold;
   margin-bottom: 20px;
   box-shadow: 0 0 15px #00bfff;
-  font-size: 16px;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
   transition: 0.3s;
 }
 
@@ -348,7 +296,34 @@ canvas {
   100% { opacity: 1; }
 }
 
+/* 📱 Media Query (Phones) */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid #00bfff;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
 
+  .lang-container {
+    margin: 10vh auto;
+    margin-left: 0;
+    gap: 20px;
+  }
 
+  #questionBox {
+    width: 90%;
+  }
 
+  .mcq-options button {
+    width: 95%;
+  }
 
+  #codeInput {
+    width: 95%;
+  }
+}

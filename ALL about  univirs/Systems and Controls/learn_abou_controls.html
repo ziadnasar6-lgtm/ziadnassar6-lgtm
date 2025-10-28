@@ -1,0 +1,176 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Knowledge Page</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #3b2f2f; /* كافيه غامق */
+      color: #f3e9dc; /* لون خط فاتح مريح */
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      color: #f4a261; /* برتقالي هادي */
+      text-shadow: 0 0 10px rgba(244, 162, 97, 0.25);
+    }
+
+    .content {
+      width: 100%;
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(6px);
+      transition: 0.3s ease;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    section h2 {
+      color: #e9c46a;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      margin-bottom: 1rem;
+      border-left: 4px solid #f4a261;
+      padding-left: 0.8rem;
+    }
+
+    section p {
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      color: #f5f2ee;
+      text-align: justify;
+    }
+
+    /* زر العودة للأعلى */
+    #backTop {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: linear-gradient(45deg, #f4a261, #e76f51);
+      border: none;
+      color: white;
+      padding: 0.7rem 1rem;
+      border-radius: 0.7rem;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 12px rgba(244, 162, 97, 0.5);
+      transition: all 0.3s ease;
+      display: none;
+    }
+
+    #backTop:hover {
+      background: linear-gradient(45deg, #ffb47f, #f28482);
+      transform: scale(1.08);
+    }
+
+    /* أزرار داخل المحتوى */
+    .info-btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #f4a261, #e76f51);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.7rem 1.4rem;
+      border-radius: 0.7rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(244, 162, 97, 0.3);
+    }
+
+    .info-btn:hover {
+      background: linear-gradient(45deg, #ffb47f, #f28482);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      .content {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>All About Artificial Intelligence ☕</h1>
+  </header>
+
+  <div class="content">
+    <section>
+      <h2>What is AI?</h2>
+      <p>
+        Artificial Intelligence (AI) is the field of computer science that focuses on creating systems capable of performing tasks that normally require human intelligence — like learning, reasoning, and understanding language.
+      </p>
+      <!-- <a href="#" class="info-btn">Learn More</a> -->
+    </section>
+
+    <section>
+      <h2>Types of AI</h2>
+      <p>
+        There are mainly two types of AI: Narrow AI (used in tasks like speech recognition or recommendation systems) and General AI (which could think and reason like humans — still theoretical).
+      </p>
+      <!-- <a href="#" class="info-btn">Explore Types</a> -->
+    </section>
+
+    <section>
+      <h2>Applications</h2>
+      <p>
+        AI powers technologies like self-driving cars, chatbots, medical diagnosis systems, and much more. It’s transforming every industry from healthcare to education to entertainment.
+      </p>
+      <!-- <a href="#" class="info-btn">See Examples</a> -->
+    </section>
+  </div>
+
+  <button id="backTop">↑ Top</button>
+
+  <script>
+    const backTop = document.getElementById("backTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backTop.style.display = "block";
+      } else {
+        backTop.style.display = "none";
+      }
+    });
+
+    backTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
+
+

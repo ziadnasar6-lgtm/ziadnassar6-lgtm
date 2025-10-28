@@ -1,5 +1,3 @@
-
-
 /* ===== Reset & Base ===== */
 * {
   margin: 0;
@@ -22,20 +20,21 @@ a {
 
 /* ===== Sidebar ===== */
 .sidebar {
-  width: 250px;
+  width: 18vw;
   background: #1a1a27;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0.2rem 0 1rem rgba(0, 0, 0, 0.4);
 }
 
 .sidebar h2 {
   color: #00bcd4;
   text-align: center;
   margin-bottom: 2rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  font-size: clamp(1rem, 1.5vw, 1.6rem);
 }
 
 .sidebar ul {
@@ -48,24 +47,25 @@ a {
 .sidebar a {
   display: block;
   padding: 0.8rem;
-  border-radius: 10px;
+  border-radius: 0.8rem;
   text-align: center;
-  background: #00bcd4;   /* الزر أزرق */
-  color: #0f0f17;        /* الكلام أسود */
+  background: #00bcd4;
+  color: #0f0f17;
   font-weight: 600;
   transition: 0.3s;
-  border: 1px solid transparent;
+  border: 0.1rem solid transparent;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 .sidebar a:hover {
   background: #0f0f17;
   color: #00bcd4;
-  border: 1px solid #00bcd4;
-  box-shadow: 0 0 12px #00bcd4;
+  border: 0.1rem solid #00bcd4;
+  box-shadow: 0 0 1rem #00bcd4;
 }
 
 .sidebar p {
-  font-size: 0.8rem;
+  font-size: clamp(0.6rem, 1vw, 0.8rem);
   color: #555;
   text-align: center;
 }
@@ -84,13 +84,13 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #333;
+  border-bottom: 0.1rem solid #333;
 }
 
 .navbar h1 {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.8rem);
   color: #00bcd4;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
 }
 
 .navbar .links {
@@ -99,40 +99,43 @@ a {
 }
 
 .navbar .links a {
-  background: #00bcd4;   /* الزر أزرق */
-  color: #0f0f17;        /* الكلام أسود */
+  background: #00bcd4;
+  color: #0f0f17;
   padding: 0.6rem 1rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   font-weight: 600;
   transition: 0.3s;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
 }
 
 .navbar .links a:hover {
   background: #0f0f17;
   color: #00bcd4;
-  box-shadow: 0 0 12px #00bcd4;
-  border: 1px solid #00bcd4;
+  box-shadow: 0 0 1rem #00bcd4;
+  border: 0.1rem solid #00bcd4;
 }
 
-/* ===== Intro Section (Scrollable Box) ===== */
+/* ===== Intro Section ===== */
 .intro {
   margin: 2rem;
   background: #1c1c2e;
-  border-radius: 16px;
+  border-radius: 1rem;
   padding: 1.5rem;
-  max-height: 200px;
+  max-height: 30vh;
   overflow-y: auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.3);
 }
 
 .intro h2 {
   color: #00bcd4;
   margin-bottom: 0.8rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
 .intro p {
   color: #ccc;
   line-height: 1.6;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 /* ===== Skills Section ===== */
@@ -145,25 +148,26 @@ a {
 
 .skill-card {
   background: #1c1c2e;
-  border-radius: 16px;
+  border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.3);
   transition: 0.3s;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.8rem 2rem rgba(0, 188, 212, 0.3);
 }
 
 .skill-card h3 {
   color: #00bcd4;
   margin-bottom: 0.5rem;
+  font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 .skill-card p {
   color: #ccc;
-  font-size: 0.95rem;
+  font-size: clamp(0.8rem, 1.3vw, 1rem);
   line-height: 1.6;
 }
 
@@ -172,51 +176,46 @@ footer {
   text-align: center;
   padding: 1rem;
   background: #1f1f2f;
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 1vw, 0.9rem);
   color: #777;
-  border-top: 1px solid #333;
+  border-top: 0.1rem solid #333;
 }
-
 
 /* ===== Chat Box ===== */
 .chat-box {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 550px;
+  right: 2vw;
+  bottom: 2vh;
+  width: 40vw;
   background: #1c1c2e;
-  border: 2px solid #00bcd4;
-  border-radius: 12px;
+  border: 0.2rem solid #00bcd4;
+  border-radius: 0.8rem;
   display: none;
   flex-direction: column;
-  box-shadow: 0 0 15px #00bcd4;
+  box-shadow: 0 0 1rem #00bcd4;
 }
 
 .chat-header {
   background: #00bcd4;
   color: #0f0f17;
-  padding: 10px;
+  padding: 0.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 10px 10px 0 0;
+  border-radius: 0.8rem 0.8rem 0 0;
 }
 
 .chat-messages {
-  padding: 10px;
-  height: 200px;
+  padding: 0.8rem;
+  height: 25vh;
   overflow-y: auto;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
   color: #ddd;
-}
-
-.chat-messages .bot {
-  color: #00bcd4;
 }
 
 .chat-input {
   display: flex;
-  border-top: 1px solid #333;
+  border-top: 0.1rem solid #333;
 }
 
 .chat-input input {
@@ -224,19 +223,21 @@ footer {
   background: #0f0f17;
   border: none;
   color: #fff;
-  padding: 8px;
+  padding: 0.8rem;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
 }
 
 .chat-input button {
   background: #00bcd4;
   color: #0f0f17;
   border: none;
-  padding: 8px 12px;
+  padding: 0.8rem 1.2rem;
   cursor: pointer;
   font-weight: bold;
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
-/* ===== Contact Modal ===== */
+/* ===== Modal ===== */
 .modal {
   display: none;
   position: fixed;
@@ -251,109 +252,90 @@ footer {
 .modal-content {
   background: #1c1c2e;
   padding: 2rem;
-  border-radius: 16px;
-  width: 350px;
+  border-radius: 1rem;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 0 20px #00bcd4;
+  box-shadow: 0 0 2rem #00bcd4;
 }
 
 .modal-content input,
 .modal-content textarea {
   background: #0f0f17;
-  border: 1px solid #00bcd4;
+  border: 0.1rem solid #00bcd4;
   color: #fff;
-  padding: 8px;
-  border-radius: 8px;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .modal-content .sendBtn {
   background: #00bcd4;
   color: #0f0f17;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
   border: none;
   cursor: pointer;
   font-weight: bold;
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 .modal-content .sendBtn:hover {
   background: #0f0f17;
   color: #00bcd4;
-  box-shadow: 0 0 10px #00bcd4;
+  box-shadow: 0 0 1rem #00bcd4;
 }
 
 #closeChat,
 #closeModal {
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
-/* ===== Buttons Styling ===== */
+/* ===== Buttons ===== */
 button {
   background: #00bcd4;
   color: #0f0f17;
   padding: 0.6rem 1rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   font-weight: 600;
   border: none;
   transition: 0.3s;
   cursor: pointer;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
 }
 
 button:hover {
   background: #0f0f17;
   color: #00bcd4;
-  box-shadow: 0 0 12px #00bcd4;
-  border: 1px solid #00bcd4;
+  box-shadow: 0 0 1rem #00bcd4;
+  border: 0.1rem solid #00bcd4;
 }
 
-
-/* 
-.start-btn {
-  background-color: #1075e8;
-  border: none;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.start-btn:hover {
-  background-color: #258fe0;
-} */
-
-
-
-
-
-/* ====== زرار النيون داخل الـ h3 ====== */
+/* ===== زرار النيون ===== */
 .skill-card h3 a {
   display: inline-block;
   text-decoration: none;
   color: #00bfff;
   font-weight: 600;
-  font-size: 1.3rem;
-  border: 2px solid #00bfff;
-  border-radius: 8px;
-  padding: 8px 18px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  border: 0.15rem solid #00bfff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
   transition: 0.3s ease;
-  box-shadow: 0 0 10px #00bfff, inset 0 0 8px #00bfff;
-  text-shadow: 0 0 5px #00bfff;
+  box-shadow: 0 0 0.8rem #00bfff, inset 0 0 0.6rem #00bfff;
+  text-shadow: 0 0 0.4rem #00bfff;
 }
 
-/* ====== التأثير عند المرور بالماوس ====== */
 .skill-card h3 a:hover {
   color: #fff;
   background: #00bfff;
-  box-shadow: 0 0 20px #00bfff, 0 0 40px #00bfff, inset 0 0 10px #fff;
+  box-shadow: 0 0 2rem #00bfff, 0 0 4rem #00bfff, inset 0 0 0.6rem #fff;
   transform: scale(1.08);
 }
 
-/* تأثير بسيط عند الضغط */
 .skill-card h3 a:active {
   transform: scale(0.97);
-  box-shadow: 0 0 10px #00bfff, inset 0 0 6px #fff;
+  box-shadow: 0 0 1rem #00bfff, inset 0 0 0.4rem #fff;
 }

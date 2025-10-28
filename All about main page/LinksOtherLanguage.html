@@ -5,6 +5,23 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Other Languages</title>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
 <style>
   html, body {
     height: 100%;
@@ -25,11 +42,55 @@
     z-index: 0;
     display: block;
   }
-</style>
-</head>
-<body>
 
+
+/* 🌍 كود التناسب مع جميع الشاشات */
+@media (max-width: 1024px) {
+  .item {
+    font-size: 3vw !important;
+  }
+  .item::before {
+    inset: -2vw !important;
+    filter: blur(2vw) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8vw !important;
+  }
+  .item {
+    font-size: 4vw !important;
+  }
+  .item::before {
+    inset: -2.5vw !important;
+    filter: blur(2.5vw) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10vw !important;
+  }
+  .item {
+    font-size: 5vw !important;
+  }
+  .item::before {
+    inset: -3vw !important;
+    filter: blur(3vw) !important;
+  }
+}
+
+
+
+
+</style>
+
+  
 <!-- 🔗 لينكات داخل HTML -->
+
 <div class="hidden-links">
   <a href="../ALL about other Language/All about canvas/canvas.html">Canvas</a>
   <a href="../ALL about other Language/All about NodeJS/nodejs.html">NodeJS</a>
@@ -42,6 +103,16 @@
   <a href="../ALL about other Language/All about Assambly/Assambly.html">Assembly</a>
   <a href="#">C#</a>
 </div>
+<canvas id="background"></canvas>
+
+
+
+
+
+
+
+
+
 
 <canvas id="background"></canvas>
 
@@ -50,7 +121,7 @@
   const canvas = document.getElementById('background');
   const ctx = canvas.getContext('2d');
   const links = Array.from(document.querySelectorAll('.hidden-links a'));
-  
+
   const data = links.map(a => ({ link: a.href, label: a.textContent }));
 
   let width = window.innerWidth;
@@ -63,16 +134,18 @@
     height = window.innerHeight;
     canvas.width = width;
     canvas.height = height;
+    updateCircleSizes();
     arrangeCircles();
   });
 
   class GlowCircle {
     constructor(link, label, x, y) {
+      const base = Math.min(window.innerWidth, window.innerHeight);
+      this.radius = base < 600 ? 90 : base < 900 ? 140 : 200;
       this.x = x;
       this.y = y;
       this.baseX = x;
       this.baseY = y;
-      this.radius = 200;
       this.alpha = Math.random() * 0.3 + 0.15;
       this.angle = Math.random() * Math.PI * 2;
       this.speed = Math.random() * 0.02 + 0.01;
@@ -104,8 +177,9 @@
       ctx.restore();
 
       ctx.save();
-      ctx.font = `bold ${this.hovered ? 26 : 22}px Poppins`;
-      ctx.fillStyle = this.hovered ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0.8)';
+      const baseFont = this.radius < 100 ? 16 : this.radius < 160 ? 20 : 26;
+      ctx.font = `bold ${this.hovered ? baseFont + 2 : baseFont}px Poppins`;
+      ctx.fillStyle = this.hovered ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0.85)';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.shadowColor = 'rgba(0,150,255,0.8)';
@@ -143,6 +217,13 @@
         const { link, label } = data[index++];
         circles.push(new GlowCircle(link, label, x, y));
       }
+    });
+  }
+
+  function updateCircleSizes() {
+    const base = Math.min(window.innerWidth, window.innerHeight);
+    circles.forEach(c => {
+      c.radius = base < 600 ? 90 : base < 900 ? 140 : 200;
     });
   }
 
@@ -184,10 +265,14 @@
 
   animate();
 })();
-
-
-
-
 </script>
+
+
+
+
+
+
+
+
 </body>
 </html>

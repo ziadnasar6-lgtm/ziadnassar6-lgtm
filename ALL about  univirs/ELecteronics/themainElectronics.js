@@ -1,6 +1,5 @@
 
 
-
 // ========== Zoz Academy JS ==========
 
 // عناصر أساسية
@@ -11,7 +10,7 @@ const darkModeBtn = document.getElementById("darkmode-btn");
 const viewRankBtn = document.getElementById("view-rank");
 const startButtons = document.querySelectorAll(".start-btn");
 
-// نظام الرتب
+// رتب الرتب
 const ranks = ["Beginner", "Learner", "Smart Coder", "Pro Developer", "Math Master 👑"];
 let currentRank = 0;
 let coursesCompleted = 0;
@@ -26,7 +25,7 @@ startButtons.forEach((btn) => {
     coursesCompleted++;
     alert(`✅ You finished: ${btn.parentElement.querySelector("h3").textContent}`);
 
-    // رفع الرتبة عند إكمال الكورسات
+    // كل ما المستخدم يخلص كل الكورسات يترفع مستوى
     if (coursesCompleted % totalCourses === 0) {
       currentRank = (currentRank + 1) % ranks.length;
       rank.textContent = ranks[currentRank];
@@ -35,7 +34,7 @@ startButtons.forEach((btn) => {
   });
 });
 
-// 🌙 الوضع الليلي
+// 🌙 تفعيل الوضع الليلي
 darkModeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
   darkModeBtn.textContent = document.body.classList.contains("dark-mode")
@@ -43,53 +42,29 @@ darkModeBtn.addEventListener("click", () => {
     : "🌙 Dark Mode";
 });
 
-// ================== 🌐 الترجمة ==================
+// 🌐 زر الترجمة
 let isArabic = false;
-
-const translations = {
-  en: {
-    startLearning: "Start Learning",
-    descriptions: [
-      "Teaches programming and controlling small devices like Arduino and Raspberry Pi. Crucial for developing robots, smart devices, and Internet of Things (IoT) systems.",
-      "Studies binary logic, logic gates, and sequential circuits. It’s essential for understanding computers, microcontrollers, and digital system design.",
-      "Focuses on how current and voltage flow through electrical circuits. Forms the foundation for understanding hardware and embedded programming applications.",
-      "Covers analyzing and transforming audio, video, and digital signals. Important for data processing, computer vision, and voice or image recognition."
-    ]
-  },
-  ar: {
-    startLearning: "ابدأ التعلم",
-    descriptions: [
-      "بتتعلم فيها إزاي تبرمج وتتحكم في أجهزة صغيرة زي الأردوينو والراسبيري باي — الأساس لأي مشروع روبوت أو جهاز ذكي 🔥",
-      "هتفهم المنطق الرقمي والبوابات المنطقية، وازاي الكمبيوتر بيفكر بالأصفار والواحدات 💡",
-      "هتتعلم ازاي الكهربا بتتحرك في الدواير وتتعامل مع الفولت والتيار — الأساس لأي مهندس إلكترونيات ⚡",
-      "بتغوص في عالم معالجة الصوت والصورة — زي إزاي الكمبيوتر بيفهم الصوت أو الصورة 🎧📸"
-    ]
-  }
-};
-
-translateBtn.addEventListener("click", () => {
+translateBtn.addEventListener("click", () => { 
   isArabic = !isArabic;
-  const lang = isArabic ? "ar" : "en";
 
-  // غيّر نص زرار الترجمة نفسه
-  translateBtn.textContent = isArabic ? "🌐 English" : "🌐 Translate";
-
-  // غير أوصاف المواد كلها
-  const descriptions = document.querySelectorAll(".course-card p");
-  descriptions.forEach((desc, i) => {
-    if (translations[lang].descriptions[i]) {
-      desc.textContent = translations[lang].descriptions[i];
-    }
-  });
-
-  // غير زرار Start Learning
-  document.querySelectorAll(".start-btn").forEach(btn => {
-    btn.textContent = translations[lang].startLearning;
-  });
+  if (isArabic) {
+    translateBtn.textContent = "🌐 English";
+    document.querySelector(".intro-box h1").textContent = "ليه بندرس الرياضة في هندسة البرمجيات";
+    document.querySelector(".courses h2").textContent = "كورسات الرياضيات";
+    document.querySelector(".branches h2").textContent = "فروع الرياضيات";
+  } else {
+    translateBtn.textContent = "🌐 Arabic";
+    document.querySelector(".intro-box h1").textContent = "Why We Study Mathematics";
+    document.querySelector(".courses h2").textContent = "Mathematics Courses";
+    document.querySelector(".branches h2").textContent = "Mathematics Branches";
+  }
 });
 
-// 💬 عرض رسالة الرتبة
+// 💬 عند الضغط على الرانك تظهر رسالة في السايد بار
 viewRankBtn.addEventListener("click", () => {
   rankMessage.textContent = `🎉 Your current rank is "${rank.textContent}". Keep going to unlock the next level!`;
   rankMessage.classList.toggle("show");
 });
+
+
+

@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mathematics | Zoz Academy</title>
   <link rel="stylesheet" href="themainElectronics.css" />
+  <link rel="stylesheet" href="../../index.css">
 </head>
 <body>
 
@@ -21,8 +21,8 @@
   <!-- <button id="darkmode-btn">🌙 Dark Mode</button> -->
 
   <nav class="sidebar-links">
-    <div class="zoz" ><a href= "../../All about main page/main_one.html " target="_blank">🏠 Home</a></div>
-    <div class="zoz"><a href= "../../ALL about Tshatto/Tshatoo_three.html" target="_blank">💬 Ask Chatwoo</a></div>
+    <div class="zoz" ><a href= "../../All about main page/main_one.html" target="_blank">🏠 Home</a></div>
+    <div class="zoz"><a href= "../../ALL about Tshatto/Tshatoo.html" target="_blank">💬 Ask Chatwoo</a></div>
     <div class="zoz"><a href="#" target="_blank">📈 My Progress</a></div>
     <div class="zoz"><a href="#" target="_blank">⚙ Settings</a></div>
   </nav>
@@ -41,100 +41,40 @@
   <!-- Main Content -->
   <main class="content">
     <!-- Top Section -->
-    <section class="intro-box">
-    <pre> <h3> 
-<h2> 1. Digital Electronics</h2>
+    <!-- <section class="intro-box"> -->
+ 
 
-About: This subject focuses on how computers and digital systems work using binary logic 
 
-(0s and 1s). You’ll study logic gates, flip-flops,
+<a href="learn_abou_electronics.html" class="glow-btn">Learn about Electronics  </a>
 
- multiplexers, and how processors handle data.
-Field: Used in computer architecture, robotics, AI hardware, and embedded systems.
+<style>
+.glow-btn {
+  display: inline-block;
+  text-decoration: none; /* شيل الخط من تحت */
+  color: white;
+  background: linear-gradient(45deg, #ff8c00, #ff4500); /* برتقالي متدرّج */
+  padding: 0.8rem 2rem;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  box-shadow: 0 0 1rem rgba(255, 140, 0, 0.6);
+  transition: all 0.3s ease;
+  text-align: center;
+}
 
-What You’ll Gain: You’ll understand how digital circuits think — which helps you write 
-
-more efficient low-level code and design intelligent systems.
-Advantages: Builds strong logical thinking and bridges the gap between hardware and software.
-
-Difficulty: Moderate — needs focus on binary operations and truth tables but
- becomes fun once you start building circuits.
-
----
-<h3>⚙ 2. Microcontrollers & Embedded Systems</h3>
-
-About: This field teaches how to program and control small 
-computers (microcontrollers) that exist inside devices
- like smartwatches, cars, and sensors.
-Field: Used in IoT, robotics, automation, and smart devices.
-What You’ll Gain: You’ll learn C/C++ coding for hardware, how 
-to connect sensors and actuators, and how to make your own devices come to life.
-Advantages: Combines coding + electronics — perfect for practical, real-world projects.
-Difficulty: Medium to high — because it mixes software and hardware, but the results are very satisfying.
-
----
-
-<h3>⚡ 3. Circuit Analysis</h3>
-
-About: Teaches the basics of how electricity moves through resistors,
- capacitors, and inductors, and how to calculate voltage, current, and power in circuits.
-Field: The foundation of all electronic engineering, useful for anyone working with hardware or power systems.
-What You’ll Gain: A deep understanding of how devices physically work — essential
- for debugging or building circuits for embedded programming.
-Advantages: Strengthens problem-solving and gives you full control over how electronic components behave.
-Difficulty: Moderate — needs good math and patience, but once you get it,
- everything in electronics makes sense.
-
----
-
-<h3>🎧 4. Signal Processing  </h3>
-
-About: This subject deals with analyzing and transforming signals — like sound,
- images, and sensor data — using mathematical and programming tools.
-Field: Applied in AI, machine learning, voice recognition, computer vision, and communications.
-What You’ll Gain: You’ll understand how to clean, analyze, and interpret raw data 
-from the real world (like sound waves or sensor inputs).
-Advantages: Super powerful for data analysis and advanced AI applications.
-Difficulty: High — it involves math and algorithms, 
-but it’s one of the most valuable skills in modern technology.
-
----
-
-<h3> 💡 In short:</h3>
-These four subjects connect hardware and programming, making you capable of 
-understanding how technology truly works — not just how to code it, but how to make it real.
-</h3>
-    </pre>
+.glow-btn:hover {
+  background: linear-gradient(45deg, #ffa500, #ff6600);
+  box-shadow: 0 0 1.5rem rgba(255, 165, 0, 0.9), 0 0 2.5rem rgba(255, 165, 0, 0.5);
+  transform: scale(1.05);
+}
+</style>
 
 
 
-      <div class="intro-buttons">
-        <button>📘 Read More</button>
-        <button>🎯 Start Intro Quiz</button>
-      </div>
-    </section>
+    <!-- </section> -->
 
-    <!-- Divider -->
-    <div class="divider"></div>
-    <section class="branches">
-      <div class="zoz_one"></div><h2>Electronics </h2>  </div>
-      <div class="branch-list">
-        <div class="branch">
-          <h3>Electronics</h3>
-          <pre> 
-             <h4>
-Electronics in programming focuses on understanding how digital and physical systems interact, starting from digital logic
- and circuits to programming microcontrollers and analyzing signals.
-By learning subjects like Digital Electronics, Circuit Analysis, Embedded Systems,
- and Signal Processing, you gain both the coding and hardware knowledge needed to 
- build smart devices, robots, and real-world applications.
-Although some topics can be mathematically challenging, this field develops strong
- problem-solving, logical thinking, and innovation skills, making you capable of turning code into real, working technology.
 
-             </h4>
-          </pre>
-
-    </section> 
+    
 
     <!-- Divider -->
     <div class="divider"></div>
@@ -145,8 +85,9 @@ Although some topics can be mathematically challenging, this field develops stro
       <div class="course-card">
         <div class="name_lecture"> <h3> Microcontrollers & Embedded Systems</h3></div>
         <p> 
-             Teaches programming and controlling small devices like Arduino and Raspberry Pi.
-             Crucial for developing robots, smart devices, and Internet of Things (IoT) systems.
+             Teaches programming and controlling <br> 
+             small devices like Arduino and Raspberry Pi.<br>
+             Crucial for developing robots, smart<br> devices, and Internet of Things (IoT) systems.
         </p>
         <button class="start-btn">Start Learning</button>
       </div>
@@ -156,8 +97,10 @@ Although some topics can be mathematically challenging, this field develops stro
         <div class="name_lecture"><h3>Digital Electronics</h3> </div>
         <p>
 
-         Studies binary logic, logic gates, and sequential circuits.
-         It’s essential for understanding computers, microcontrollers, and digital system design.
+         Studies binary logic, logic gates, and<br> 
+          sequential circuits.<br> <br> 
+         It’s essential for understanding 
+         <br> computers, microcontrollers, and digital system design.
             
         </p>
         <button class="start-btn">Start Learning</button>
@@ -166,8 +109,10 @@ Although some topics can be mathematically challenging, this field develops stro
       <div class="course-card">
         <div class="name_lecture"> <h3>Circuit Analysis</h3></div>
         <p>
-          Focuses on how current and voltage flow through electrical circuits.
-          Forms the foundation for understanding hardware and embedded programming applications.
+          Focuses on how current and voltage
+          <br> flow through electrical circuits.<br> 
+          Forms the foundation for understanding hardware
+          <br>  and embedded programming applications.
         </p>
         <button class="start-btn">Start Learning</button>
       </div>
@@ -175,15 +120,21 @@ Although some topics can be mathematically challenging, this field develops stro
       <div class="course-card">
         <div class="name_lecture"> <h3>Signal Processing</h3></div>
         <p>
-             Covers analyzing and transforming audio, video, and digital signals.
-             Important for data processing, computer vision, and voice or image recognition.
+             Covers analyzing and transforming <br> 
+             audio, video, and digital signals.<br> <br>
+             Important for data processing, computer
+             <br>  vision, and voice or image recognition.
         </p>
         <button class="start-btn">Start Learning</button>
       </div>
+
+
+
+
+
   <!-- Footer -->
   <!-- <footer>© 2025 All Rights Reserved to Ziad Nassar</footer> -->
 
   <script src="themainElectronics.js"></script>
 </body>
 </html>
-

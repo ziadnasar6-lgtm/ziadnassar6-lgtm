@@ -2111,7 +2111,7 @@ submitBtn.onclick = () => {
   setTimeout(() => {
     feedbackMsg.style.opacity = "0";
     setTimeout(() => feedbackMsg.remove(), 500);
-  }, 3000);
+  }, 5000);
 
   // ✅ عرض النتائج أسفل بعد سكرول ناعم
   window.scrollTo({ top: quizContainer.offsetTop - 50, behavior: "smooth" });
@@ -2178,6 +2178,11 @@ doneBtn.onclick = () => {
     }
   }
 };
+
+    // 🔄 أعد تحميل الصفحة بعد النجاح فقط
+    setTimeout(() => {
+      location.reload();
+    }, 1200); // ممكن تعدّل الوقت حسب ما تحب
 
 
 };

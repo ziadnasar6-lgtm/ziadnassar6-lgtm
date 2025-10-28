@@ -427,3 +427,130 @@ body {
 
 
 
+
+
+/* 📱 Media Queries for full responsiveness without changing style */
+
+@media (max-width: 1024px) {
+  .navbar {
+    left: 200px;
+    width: calc(100% - 200px);
+    font-size: 1.3rem;
+  }
+  .sidebar {
+    width: 200px;
+  }
+  .main-content {
+    margin-left: 210px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    left: 0;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .sidebar h2, 
+  .sidebar p,
+  .progress-section,
+  .rank-box {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .lessons-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .lesson-card,
+  .lesson-box {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side-btn,
+  .side-link {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .lessons-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .lesson-card,
+  .lesson-box {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+/* 📱 Responsive scaling - keep layout same but smaller on phone */
+@media (max-width: 1024px) {
+  body {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    transform: scale(0.8);
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    transform: scale(0.7);
+    transform-origin: top center;
+  }
+}

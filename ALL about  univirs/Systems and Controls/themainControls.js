@@ -1,3 +1,6 @@
+
+
+
 // ========== Zoz Academy JS ==========
 
 // عناصر أساسية
@@ -8,7 +11,7 @@ const darkModeBtn = document.getElementById("darkmode-btn");
 const viewRankBtn = document.getElementById("view-rank");
 const startButtons = document.querySelectorAll(".start-btn");
 
-// نظام الرتب
+// رتب الرتب
 const ranks = ["Beginner", "Learner", "Smart Coder", "Pro Developer", "Math Master 👑"];
 let currentRank = 0;
 let coursesCompleted = 0;
@@ -23,7 +26,7 @@ startButtons.forEach((btn) => {
     coursesCompleted++;
     alert(`✅ You finished: ${btn.parentElement.querySelector("h3").textContent}`);
 
-    // رفع الرتبة عند إكمال الكورسات
+    // كل ما المستخدم يخلص كل الكورسات يترفع مستوى
     if (coursesCompleted % totalCourses === 0) {
       currentRank = (currentRank + 1) % ranks.length;
       rank.textContent = ranks[currentRank];
@@ -32,7 +35,7 @@ startButtons.forEach((btn) => {
   });
 });
 
-// 🌙 الوضع الليلي
+// 🌙 تفعيل الوضع الليلي
 darkModeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
   darkModeBtn.textContent = document.body.classList.contains("dark-mode")
@@ -40,79 +43,29 @@ darkModeBtn.addEventListener("click", () => {
     : "🌙 Dark Mode";
 });
 
-// ================== 🌐 الترجمة ==================
+// 🌐 زر الترجمة
 let isArabic = false;
-
-const translations = {
-  en: {
-    rankTitle: "👑 Rank",
-    viewRank: "🔍 View Rank Info",
-    translate: "🌐 Translate",
-    darkMode: "🌙 Dark Mode",
-    home: "🏠 Home",
-    askChatwoo: "💬 Ask Chatwoo",
-    progress: "📈 My Progress",
-    settings: "⚙ Settings",
-    intro: "🩵 1. Introduction to Computer Science",
-    branches: "Systems & Controls",
-    courses: "Intelligent Systems",
-    readMore: "📘 Read More",
-    startQuiz: "🎯 Start Intro Quiz",
-    startLearning: "Start Learning"
-  },
-  ar: {
-    rankTitle: "👑 المستوى",
-    viewRank: "🔍 عرض المستوى",
-    translate: "🌐 English",
-    darkMode: "🌙 الوضع الليلي",
-    home: "🏠 الرئيسية",
-    askChatwoo: "💬 تحدث مع تشاتو",
-    progress: "📈 تقدمي",
-    settings: "⚙ الإعدادات",
-    intro: "🩵 1. مقدمة في علوم الحاسب",
-    branches: "الأنظمة والتحكم",
-    courses: "الأنظمة الذكية",
-    readMore: "📘 اقرأ المزيد",
-    startQuiz: "🎯 ابدأ الاختبار",
-    startLearning: "ابدأ التعلم"
-  }
-};
-
-translateBtn.addEventListener("click", () => {
+translateBtn.addEventListener("click", () => { 
   isArabic = !isArabic;
-  const lang = isArabic ? "ar" : "en";
 
-  document.querySelector(".sidebar h2").textContent = translations[lang].rankTitle;
-  viewRankBtn.textContent = translations[lang].viewRank;
-  translateBtn.textContent = translations[lang].translate;
-  darkModeBtn.textContent = translations[lang].darkMode;
-
-  const links = document.querySelectorAll(".sidebar-links a");
-  if (links[0]) links[0].textContent = translations[lang].home;
-  if (links[1]) links[1].textContent = translations[lang].askChatwoo;
-  if (links[2]) links[2].textContent = translations[lang].progress;
-  if (links[3]) links[3].textContent = translations[lang].settings;
-
-  const introTitle = document.querySelector(".intro-box h2");
-  if (introTitle) introTitle.textContent = translations[lang].intro;
-
-  const branchesTitle = document.querySelector(".branches h2");
-  if (branchesTitle) branchesTitle.textContent = translations[lang].branches;
-
-  const coursesTitle = document.querySelector(".courses h2");
-  if (coursesTitle) coursesTitle.textContent = translations[lang].courses;
-
-  const introButtons = document.querySelectorAll(".intro-buttons button");
-  if (introButtons[0]) introButtons[0].textContent = translations[lang].readMore;
-  if (introButtons[1]) introButtons[1].textContent = translations[lang].startQuiz;
-
-  document.querySelectorAll(".start-btn").forEach(btn => {
-    btn.textContent = translations[lang].startLearning;
-  });
+  if (isArabic) {
+    translateBtn.textContent = "🌐 English";
+    document.querySelector(".intro-box h1").textContent = "ليه بندرس الرياضة في هندسة البرمجيات";
+    document.querySelector(".courses h2").textContent = "كورسات الرياضيات";
+    document.querySelector(".branches h2").textContent = "فروع الرياضيات";
+  } else {
+    translateBtn.textContent = "🌐 Arabic";
+    document.querySelector(".intro-box h1").textContent = "Why We Study Mathematics";
+    document.querySelector(".courses h2").textContent = "Mathematics Courses";
+    document.querySelector(".branches h2").textContent = "Mathematics Branches";
+  }
 });
 
-// 💬 عرض رسالة الرتبة
+// 💬 عند الضغط على الرانك تظهر رسالة في السايد بار
 viewRankBtn.addEventListener("click", () => {
   rankMessage.textContent = `🎉 Your current rank is "${rank.textContent}". Keep going to unlock the next level!`;
   rankMessage.classList.toggle("show");
 });
+
+
+

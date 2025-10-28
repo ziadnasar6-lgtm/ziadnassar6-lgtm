@@ -1,53 +1,83 @@
 .intro-overlay {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(0,0,0,0.8), #000);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   z-index: 9999;
   overflow: hidden;
+  padding: 2vh 4vw;
+  box-sizing: border-box;
+
+  /* الخلفية */
+  background: 
+    radial-gradient(circle at center, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 1)),
+    url("your-background-image.jpg"); /* 🟢 لو عندك صورة، حط مسارها هنا */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
+/* النص */
 .intro-text {
   color: #00eaff;
-  font-size: 3rem;
+  font-size: clamp(1.6rem, 4vw, 3rem);
   text-shadow: 0 0 20px #00eaff;
   animation: fadeIn 1s ease-in-out;
+  margin-bottom: 3vh;
+  text-align: center;
+  max-width: 90vw;
+  line-height: 1.3;
+  word-wrap: break-word;
 }
 
-.fade-out {
-  animation: fadeOut 1.5s forwards;
+/* الأزرار */
+.mode {
+  display: inline-block;
+  padding: clamp(10px, 2vh, 14px) clamp(20px, 4vw, 28px);
+  margin: clamp(8px, 1.2vh, 15px);
+  font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+  text-decoration: none;
+  color: #fff;
+  background: #ff7f50;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: min(85vw, 220px);
 }
 
+.mode:hover {
+  background: #ffa07a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* التأثيرات */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1); }
 }
-
 @keyframes fadeOut {
   from { opacity: 1; }
   to { opacity: 0; transform: scale(0.9); }
 }
 
-
-
-.mode {
-    display: inline-block;
-    padding: 12px 24px;
-    margin: 10px;
-    font-size: 18px;
-    text-decoration: none; /* شيل الخط السفلي */
-    color: #fff;
-    background: #ff7f50; /* لون أساسي */
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+/* 📱 الموبايل */
+@media (max-width: 600px) {
+  .intro-overlay {
+    padding: 5vh 6vw;
+    justify-content: flex-start;
   }
-
-  .mode:hover {
-    background: #ffa07a; /* ينوّر لما تمرر الماوس */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    transform: translateY(-2px);
+  .intro-text {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    margin-top: 10vh;
   }
+  .mode {
+    width: 90%;
+    font-size: 1rem;
+    padding: 12px 18px;
+  }
+}
