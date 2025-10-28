@@ -347,3 +347,56 @@ body.dark-mode .start-btn {
 
 
 
+
+
+/* الشاشات الصغيرة مثل الموبايلات */
+@media screen and (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container, .box, .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  button, input, select {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sidebar {
+    display: none; /* تخفي القايمة الجانبية ف الموبايل */
+  }
+}
+
