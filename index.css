@@ -1,0 +1,67 @@
+
+
+/* ======= Responsive Layout Master ======= */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* تصغير النصوص والصور */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: clamp(22px, 5vw, 40px);
+}
+h2 {
+  font-size: clamp(18px, 4vw, 32px);
+}
+p {
+  font-size: clamp(14px, 3vw, 20px);
+  line-height: 1.6;
+}
+
+/* تعديل الشكل على الشاشات الصغيرة */
+@media (max-width: 992px) {
+  .container, .content, .row {
+    display: block !important;
+    width: 100% !important;
+    text-align: center;
+    padding: 10px !important;
+  }
+
+  nav, header, footer {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  button, input {
+    width: 90% !important;
+    margin: 10px auto !important;
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section, .card {
+    margin: 10px auto;
+    width: 95%;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+}
