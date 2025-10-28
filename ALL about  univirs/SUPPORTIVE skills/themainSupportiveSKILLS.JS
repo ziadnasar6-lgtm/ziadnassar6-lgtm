@@ -1,22 +1,28 @@
 // ===== Contact Modal =====
-const contactBtns = [document.getElementById("contactBtn"), document.getElementById("contactBtnTop")];
+const contactBtn = document.getElementById("contactBtn");
 const contactModal = document.getElementById("contactModal");
 const closeModal = document.getElementById("closeModal");
 
-contactBtns.forEach(btn => btn.addEventListener("click", () => contactModal.style.display = "flex"));
-closeModal.addEventListener("click", () => contactModal.style.display = "none");
-window.addEventListener("click", e => { if (e.target === contactModal) contactModal.style.display = "none"; });
+if (contactBtn && contactModal && closeModal) {
+  contactBtn.addEventListener("click", () => contactModal.style.display = "flex");
+  closeModal.addEventListener("click", () => contactModal.style.display = "none");
+  window.addEventListener("click", e => {
+    if (e.target === contactModal) contactModal.style.display = "none";
+  });
+}
 
 // ===== Chat Box =====
-const chatBtns = [document.getElementById("chatBtn"), document.getElementById("chatBtnTop")];
+const chatBtn = document.getElementById("chatBtn");
 const chatBox = document.getElementById("chatBox");
 const closeChat = document.getElementById("closeChat");
 const sendMessage = document.getElementById("sendMessage");
 const userMessage = document.getElementById("userMessage");
 const chatMessages = document.getElementById("chatMessages");
 
-chatBtns.forEach(btn => btn.addEventListener("click", () => chatBox.style.display = "flex"));
-closeChat.addEventListener("click", () => chatBox.style.display = "none");
+if (chatBtn && chatBox && closeChat) {
+  chatBtn.addEventListener("click", () => chatBox.style.display = "flex");
+  closeChat.addEventListener("click", () => chatBox.style.display = "none");
+}
 
 // ===== Smart Reply Logic =====
 function getSmartReply(message) {

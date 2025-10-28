@@ -530,6 +530,202 @@ button:hover {
 
 
 
+/* 📱 Responsive sidebar behavior */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    order: -1; /* يخليه يظهر فوق المحتوى */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 0;
+  }
+
+  .main-content {
+    width: 100%;
+    margin: 0;
+    padding: 3vh 5vw;
+  }
+
+  /* لو فيه تقسيم فليكس للصفحة */
+  .page-layout {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* 📱 ترتيب اللينكات داخل السايد بار في الموبايل */
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sidebar .rank-item,
+  .sidebar .nav-link,
+  .sidebar a,
+  .sidebar button {
+    display: block;
+    width: 90%;
+    margin: 1vh auto;
+  }
+}
 
 
+/* 🌍 Responsive Fix — Keep Same Layout but Scale Proportionally */
 
+@media (max-width: 1200px) {
+  html {
+    font-size: 95%;
+  }
+
+  .navbar {
+    padding: 0 3vw;
+  }
+
+  .sidebar {
+    width: 20vw;
+    padding: 8vh 2vw;
+  }
+
+  .main-content {
+    margin-left: 20vw;
+    padding: 8vh 3vw;
+  }
+
+  .lesson-circle {
+    width: 7vw;
+    height: 7vw;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 90%;
+  }
+
+  .navbar {
+    padding: 0 4vw;
+  }
+
+  .sidebar {
+    width: 25vw;
+  }
+
+  .main-content {
+    margin-left: 25vw;
+    padding: 6vh 3vw;
+  }
+
+  .lesson-circle {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .lesson-container {
+    max-height: 60vh;
+    padding: 3vw;
+  }
+
+  .lesson-box {
+    padding: 3vw;
+    margin-top: 3vh;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 85%;
+  }
+
+  body {
+    flex-direction: column;
+  }
+
+  .navbar {
+    height: 8vh;
+    padding: 0 5vw;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-right: none;
+    border-bottom: 2px solid #007bff;
+    padding: 2vh 2vw;
+  }
+
+  .main-content {
+    margin: 0;
+    width: 100%;
+    padding: 5vh 5vw;
+  }
+
+  .lesson-circle {
+    width: 12vw;
+    height: 12vw;
+  }
+
+  .lesson-container {
+    max-height: none;
+    padding: 5vw;
+  }
+
+  .cpp-box,
+  .lesson-box {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 80%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1vh 2vw;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
+  }
+
+  .sidebar {
+    flex-direction: column;
+    padding: 3vh 3vw;
+  }
+
+  .lesson-circle {
+    width: 16vw;
+    height: 16vw;
+    margin-bottom: 2vh;
+  }
+
+  .lesson-container {
+    padding: 5vw;
+  }
+
+  .lesson-box {
+    padding: 4vw;
+  }
+
+  button,
+  .zozlink,
+  .zozlink_two,
+  .zozlink_three {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}

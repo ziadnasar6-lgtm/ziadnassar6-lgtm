@@ -259,3 +259,99 @@ body {
 .zoz:active, .zoz2:active, .zoz3:active, .zoz_four:active, .Watch:active {
   transform: scale(0.96);
 }
+
+
+
+
+
+
+
+
+
+
+/* ========== 📱 RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+
+  body {
+    flex-direction: column;
+  }
+
+  /* 🔹 Navbar */
+  .navbar {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 12px 0;
+    box-shadow: 0 0 15px #0099ff;
+  }
+
+  /* 🔹 Sidebar فوق المحتوى */
+  .sidebar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid #0099ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    box-shadow: 0 0 15px #0077ff;
+  }
+
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* 🔹 الروابط داخل السايدبار فوق بعض */
+
+  .sidebar a {
+  display: inline-block;
+  width: auto; /* ✅ الزرار على قد الكلام */
+  text-align: center;
+  margin: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: rgba(0, 20, 50, 0.6);
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.3);
+}
+
+
+  .sidebar a:hover {
+    background: rgba(0, 100, 200, 0.8);
+  }
+
+  /* 🔹 المحتوى الرئيسي */
+  .main-content {
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* 🔹 الدوائر */
+  .circles-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+
+  /* 🔹 صندوق الدرس */
+  .lesson-box {
+    width: 95%;
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+
+  .lesson-box textarea {
+    height: 150px;
+  }
+
+  /* 🔹 الأزرار */
+  .zoz, .zoz2, .zoz3, .zoz_four, .Watch {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}

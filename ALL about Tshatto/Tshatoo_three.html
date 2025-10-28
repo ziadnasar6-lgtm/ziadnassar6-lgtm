@@ -9,121 +9,178 @@
   <meta charset="UTF-8" />
   <title> Smart Tshatooo</title> 
   <style>
-    body {
-      margin: 0;
-      background: linear-gradient(180deg, #020617, #001133);
-      font-family: "Poppins", sans-serif;
-      color: #e0e0ff;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-    }
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #020617, #001133);
+  font-family: "Poppins", sans-serif;
+  color: #e0e0ff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
-    .top-bar {
-      display: flex;
-      justify-content: flex-end;
-      padding: 10px 20px;
-    }
+/* 🔹 شريط علوي */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1vh 2vw;
+}
 
-    .lang-btn {
-      background: #0044cc;
-      border: none;
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
+.lang-btn {
+  background: #0044cc;
+  border: none;
+  color: #fff;
+  padding: 0.8vh 1.5vw;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 1rem;
+}
 
-    .lang-btn:hover {
-      background: #0066ff;
-    }
+.lang-btn:hover {
+  background: #0066ff;
+}
 
-    .bubble-container {
-      position: relative;
-      height: 180px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 50px;
-    }
+/* 🔹 الفقاعات */
+.bubble-container {
+  position: relative;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5vw;
+  flex-wrap: wrap;
+}
 
-    .bubble {
-      position: relative;
-      background: rgba(0, 40, 120, 0.7);
-      border: 2px solid #1d4ed8;
-      border-radius: 50%;
-      color: #fff;
-      width: 120px;
-      height: 120px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 10px;
-      box-shadow: 0 0 20px rgba(0, 80, 255, 0.4);
-      cursor: pointer;
-      animation: float 6s ease-in-out infinite;
-    }
+.bubble {
+  position: relative;
+  background: rgba(0, 40, 120, 0.7);
+  border: 0.2rem solid #1d4ed8;
+  border-radius: 50%;
+  color: #fff;
+  width: 10vw;
+  height: 10vw;
+  min-width: 90px;
+  min-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1vh;
+  box-shadow: 0 0 2vw rgba(0, 80, 255, 0.4);
+  cursor: pointer;
+  animation: float 6s ease-in-out infinite;
+  font-size: 1rem;
+}
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1.5vh); }
+}
 
-    .chat-container {
-      flex: 1;
-      padding: 20px;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-    }
+/* 🔹 الرسائل */
+.chat-container {
+  flex: 1;
+  padding: 2vh 2vw;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
 
-    .message {
-      max-width: 80%;
-      padding: 12px 16px;
-      margin: 8px 0;
-      border-radius: 14px;
-      line-height: 1.6;
-      animation: fadeIn 0.3s ease;
-      white-space: pre-wrap;
-    }
+.message {
+  max-width: 80%;
+  padding: 1.2vh 1.6vw;
+  margin: 0.8vh 0;
+  border-radius: 1rem;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease;
+  white-space: pre-wrap;
+  font-size: 1rem;
+}
 
-    .bot {
-      background: #111a40;
-      align-self: flex-start;
-      border: 1px solid #1d2f6f;
-    }
+.bot {
+  background: #111a40;
+  align-self: flex-start;
+  border: 0.1rem solid #1d2f6f;
+}
 
-    .user {
-      background: #0033cc;
-      align-self: flex-end;
-      color: #fff;
-    }
+.user {
+  background: #0033cc;
+  align-self: flex-end;
+  color: #fff;
+}
 
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(10px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(1vh);}
+  to {opacity: 1; transform: translateY(0);}
+}
 
-    .table-style {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 8px;
-      background: rgba(255, 255, 255, 0.05);
-    }
+/* 🔹 الجداول */
+.table-style {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1vh;
+  background: rgba(255, 255, 255, 0.05);
+}
 
-    .table-style th, .table-style td {
-      border: 1px solid #445;
-      padding: 6px 10px;
-      text-align: left;
-    }
+.table-style th, .table-style td {
+  border: 0.1rem solid #445;
+  padding: 0.6vh 1vw;
+  text-align: left;
+}
 
-    .table-style th {
-      background: rgba(255, 255, 255, 0.1);
-    }
-  </style>
+.table-style th {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 🔹 استجابة كاملة */
+@media (max-width: 768px) {
+  .bubble-container {
+    gap: 4vw;
+    height: auto;
+  }
+
+  .bubble {
+    width: 20vw;
+    height: 20vw;
+    font-size: 0.9rem;
+  }
+
+  .lang-btn {
+    padding: 0.8vh 3vw;
+    font-size: 0.9rem;
+  }
+
+  .message {
+    max-width: 90%;
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+      </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 <body>
   <div class="top-bar">
