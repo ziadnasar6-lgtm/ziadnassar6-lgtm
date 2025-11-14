@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 // ========== إعداد عند تحميل الصفحة ========== //
 // window.addEventListener("DOMContentLoaded", () => {
 
@@ -1777,6 +1770,26 @@
           correct: 1,
           explanation: "C++ was developed at Bell Labs."
         }
+
+
+        ,
+        
+        {
+          question: "Which company first implemented C++?",
+          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
+          correct: 1,
+          explanation: "C++ was developed at Bell Labs."
+        }
+
+
+        ,
+        
+        {
+          question: "Which company first implemented C++?",
+          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
+          correct: 1,
+          explanation: "C++ was developed at Bell Labs."
+        }
         ,
         
         {
@@ -2134,7 +2147,7 @@ submitBtn.onclick = () => {
   setTimeout(() => {
     feedbackMsg.style.opacity = "0";
     setTimeout(() => feedbackMsg.remove(), 500);
-  }, 3000);
+  }, 5000);
 
   // ✅ عرض النتائج أسفل بعد سكرول ناعم
   window.scrollTo({ top: quizContainer.offsetTop - 50, behavior: "smooth" });
