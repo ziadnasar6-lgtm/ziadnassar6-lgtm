@@ -1095,45 +1095,48 @@
   ];
 
   
-  // ✅ عناصر الصفحة
-  const lessonsGrid = document.getElementById("lessonsGrid");
-  const lessonTitle = document.getElementById("lessonTitle");
-  const lessonDesc = document.getElementById("lessonDesc");
-  const watchBtn = document.getElementById("watchLectureBtn");
-  const quizContainer = document.getElementById("quizContainer");
-  const startQuizBtn = document.getElementById("startQuizBtn");
-  const progressFill = document.getElementById("progressFill");
+  
+// ================= عناصر الصفحة =================
+const lessonsGrid = document.getElementById("lessonsGrid");
+const lessonTitle = document.getElementById("lessonTitle");
+const lessonDesc = document.getElementById("lessonDesc");
+const watchBtn = document.getElementById("watchLectureBtn");
+const quizContainer = document.getElementById("quizContainer");
+const startQuizBtn = document.getElementById("startQuizBtn");
+const progressFill = document.getElementById("progressFill");
 
-document.addEventListener("DOMContentLoaded", () => {
-  updateStars(stars);
-});
-
-
-let currentLesson = null;
-// ===== modified for subjectKey = "html" =====
-const subjectKey = "css"; // change to "php" for PHP page, etc.
+// ===== مادة محددة =====
+const subjectKey = "css"; // غيّرها حسب المادة: "php", "html", ...
 let stars = JSON.parse(localStorage.getItem(`${subjectKey}_stars`)) || 0;
-let progress = JSON.parse(localStorage.getItem(`${subjectKey}_progress`)) || 0;
 let unlockedLessons = JSON.parse(localStorage.getItem(`${subjectKey}_unlockedLessons`)) || [0];
 
-  // ✅ إنشاء بطاقات الدروس
+let currentLesson = null;
 
-
-
-
+// ================= دالة تحديث الأقفال =================
+function updateLessonLocks() {
+  const cards = document.querySelectorAll("#lessonsGrid .lesson-box");
+  cards.forEach((card, index) => {
+    if (unlockedLessons.includes(index)) {
+      card.classList.remove("locked");
+      card.querySelector(".lock-icon").textContent = "🔓";
+    } else {
+      card.classList.add("locked");
+      card.querySelector(".lock-icon").textContent = "🔒";
+    }
+  });
+}
 
 // ================= إنشاء بطاقات الدروس =================
 allLessons.forEach((lesson, index) => {
   const card = document.createElement("div");
-  const isUnlocked = unlockedLessons.includes(index);
-
-  card.className = `lesson-box ${isUnlocked ? "" : "locked"}`;
+  card.className = `lesson-box ${unlockedLessons.includes(index) ? "" : "locked"}`;
   card.innerHTML = `
     <h3>${lesson.title}</h3>
-    <span class="lock-icon">${isUnlocked ? "🔓" : "🔒"}</span>
+    <span class="lock-icon">${unlockedLessons.includes(index) ? "🔓" : "🔒"}</span>
   `;
 
   card.addEventListener("click", () => {
+    const isUnlocked = unlockedLessons.includes(index);
     if (!isUnlocked) {
       alert("🔒 You must complete the previous lesson first!");
       return;
@@ -1154,7 +1157,7 @@ function showLesson(lesson, index) {
   quizContainer.innerHTML = "";
   startQuizBtn.style.display = "block";
   startQuizBtn.dataset.lessonIndex = index;
-  startQuizBtn.type = "button"; // مهم جدًا
+  startQuizBtn.type = "button";
   window.scrollTo({ top: lessonTitle.offsetTop, behavior: "smooth" });
 }
 
@@ -1165,34 +1168,27 @@ startQuizBtn.addEventListener("click", () => {
     return;
   }
 
-  // عدد الأسئلة ثابت حسب الدرس
-  let questions = currentLesson.questions.slice(0, currentLesson.questionCount || currentLesson.questions.length);
+  const questions = currentLesson.questions.slice(0, currentLesson.questionCount || currentLesson.questions.length);
   quizContainer.innerHTML = "";
 
-  // عرض الأسئلة
   questions.forEach((q, index) => {
     const qBox = document.createElement("div");
     qBox.className = "question-box";
     qBox.style.marginBottom = "25px";
     qBox.innerHTML = `
       <h3>${index + 1}. ${q.question}</h3>
-      ${q.options
-        .map(
-          (opt, i) => `
+      ${q.options.map((opt, i) => `
         <label class="option-row" style="display:block; margin-top:8px;">
           <input type="radio" name="q${index}" value="${i}">
           ${opt}
         </label>
-      `
-        )
-        .join("")}
+      `).join("")}
     `;
     quizContainer.appendChild(qBox);
   });
 
-  // زر الإرسال
   const submitBtn = document.createElement("button");
-  submitBtn.type = "button"; // مهم جدًا
+  submitBtn.type = "button";
   submitBtn.textContent = "Send Answers";
   submitBtn.className = "start-btn";
   quizContainer.appendChild(submitBtn);
@@ -1201,7 +1197,6 @@ startQuizBtn.addEventListener("click", () => {
     let correctCount = 0;
     const userAnswers = [];
 
-    // جمع الإجابات
     questions.forEach((q, index) => {
       const selected = quizContainer.querySelector(`input[name="q${index}"]:checked`);
       const userAnswer = selected ? parseInt(selected.value) : -1;
@@ -1209,10 +1204,8 @@ startQuizBtn.addEventListener("click", () => {
       if (userAnswer === q.correct) correctCount++;
     });
 
-    // مسح الأسئلة
     quizContainer.innerHTML = "";
 
-    // إنشاء إشعار مؤقت
     const feedbackMsg = document.createElement("div");
     feedbackMsg.style.position = "fixed";
     feedbackMsg.style.top = "30px";
@@ -1224,7 +1217,6 @@ startQuizBtn.addEventListener("click", () => {
     feedbackMsg.style.fontWeight = "bold";
     feedbackMsg.style.zIndex = "9999";
     feedbackMsg.style.transition = "opacity 0.5s ease";
-    feedbackMsg.style.boxShadow = "0 0 20px rgba(0,255,100,0.6)";
 
     const successRate = correctCount / questions.length;
 
@@ -1250,7 +1242,6 @@ startQuizBtn.addEventListener("click", () => {
 
     window.scrollTo({ top: quizContainer.offsetTop - 50, behavior: "smooth" });
 
-    // عرض النتائج
     questions.forEach((q, index) => {
       const userAnswer = userAnswers[index];
       const isCorrect = userAnswer === q.correct;
@@ -1258,30 +1249,23 @@ startQuizBtn.addEventListener("click", () => {
       const resultBox = document.createElement("div");
       resultBox.className = "question-result";
       resultBox.style.border = "2px solid " + (isCorrect ? "#00ff99" : "#ff4d4d");
-      resultBox.style.background = isCorrect
-        ? "rgba(0,255,100,0.1)"
-        : "rgba(255,80,80,0.1)";
+      resultBox.style.background = isCorrect ? "rgba(0,255,100,0.1)" : "rgba(255,80,80,0.1)";
       resultBox.style.borderRadius = "10px";
       resultBox.style.padding = "15px";
       resultBox.style.marginBottom = "20px";
-      resultBox.style.boxShadow = isCorrect
-        ? "0 0 10px #00ff88"
-        : "0 0 10px #ff4d4d";
+      resultBox.style.boxShadow = isCorrect ? "0 0 10px #00ff88" : "0 0 10px #ff4d4d";
 
       resultBox.innerHTML = `
         <h3>${index + 1}. ${q.question}</h3>
-        <p><strong>Your answer:</strong> ${
-          userAnswer >= 0 ? q.options[userAnswer] : "You have not answered yet!"
-        }</p>
+        <p><strong>Your answer:</strong> ${userAnswer >= 0 ? q.options[userAnswer] : "You have not answered yet!"}</p>
         <p><strong>The right answer:</strong> ${q.options[q.correct]}</p>
         <p class="explanation">💡 ${q.explanation}</p>
       `;
       quizContainer.appendChild(resultBox);
     });
 
-    // زر الإنهاء
     const doneBtn = document.createElement("button");
-    doneBtn.type = "button"; // مهم جدًا
+    doneBtn.type = "button";
     doneBtn.textContent = "✅ Done";
     doneBtn.className = "watch-btn";
     doneBtn.style.marginTop = "15px";
@@ -1290,16 +1274,15 @@ startQuizBtn.addEventListener("click", () => {
     doneBtn.onclick = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
       if (successRate >= 0.5) {
-        // إضافة نجمة وحفظها
         stars++;
-        localStorage.setItem("stars", JSON.stringify(stars));
+        localStorage.setItem(`${subjectKey}_stars`, JSON.stringify(stars));
         updateStars(stars);
 
-        // فتح الدرس التالي
         const currentIndex = allLessons.indexOf(currentLesson);
-        if (currentIndex < allLessons.length - 1 && !unlockedLessons.includes(currentIndex + 1)) {
-          unlockedLessons.push(currentIndex + 1);
-          localStorage.setItem("unlockedLessons", JSON.stringify(unlockedLessons));
+        const nextIndex = currentIndex + 1;
+        if (nextIndex < allLessons.length && !unlockedLessons.includes(nextIndex)) {
+          unlockedLessons.push(nextIndex);
+          localStorage.setItem(`${subjectKey}_unlockedLessons`, JSON.stringify(unlockedLessons));
           updateLessonLocks();
           alert("🎉 Great work! Next lesson unlocked 👏");
         }
@@ -1366,7 +1349,8 @@ function updateStars(stars) {
   starsContainer.appendChild(progressBar);
 }
 
-// ================= استدعاء الدالة عند تحميل الصفحة =================
+// ================= استدعاء الدوال عند تحميل الصفحة =================
 document.addEventListener("DOMContentLoaded", () => {
   updateStars(stars);
+  updateLessonLocks();
 });

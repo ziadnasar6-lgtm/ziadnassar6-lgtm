@@ -1097,6 +1097,8 @@
  
  
   ];
+
+  
 // ================= عناصر الصفحة =================
 const lessonsGrid = document.getElementById("lessonsGrid");
 const lessonTitle = document.getElementById("lessonTitle");
