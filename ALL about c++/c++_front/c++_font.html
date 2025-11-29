@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The main course page </title>
+  <style>
+    :root{
+      --bg1:#041223; /* very dark navy */
+      --bg2:#01203a; /* deep blue */
+      --card-bg: rgba(8,20,35,0.36);
+      --accent: #36c6ff;
+      --electric: #74f0ff;
+      --glass-border: rgba(255,255,255,0.06);
+      --glass-highlight: rgba(255,255,255,0.05);
+    }
+    /* Reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Inter, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #e6f7ff;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(20,60,90,0.25), transparent),
+                  linear-gradient(180deg,var(--bg1), var(--bg2));
+      display:flex;align-items:center;justify-content:center;
+      padding:40px;
+      overflow:hidden;
+      direction:rtl;
+    }
+
+    /* Electric animated frame around the page */
+    .electric-frame{
+      position:relative;
+      width:100%;max-width:1200px;
+      padding:40px;
+      border-radius:18px;
+      overflow:visible;
+    }
+
+    /* soft glow behind */
+    .electric-frame:before{
+      content:"";position:absolute;inset:-12px;border-radius:22px;
+      background: conic-gradient(from 180deg, rgba(116,240,255,0.06), rgba(54,198,255,0.06));
+      filter: blur(18px);
+      z-index:0;
+      pointer-events:none;
+    }
+
+    /* 'lightning' animated strokes on edges using SVG filter strip */
+    .electric-frame:after{
+      content:"";position:absolute;inset:0;border-radius:18px;z-index:2;
+      background: linear-gradient(90deg, transparent, rgba(116,240,255,0.02) 30%, transparent);
+      box-shadow: 0 0 60px rgba(54,198,255,0.06) inset;
+      pointer-events:none;
+      mix-blend-mode:screen;
+      animation: pulse 4s linear infinite;
+    }
+    @keyframes pulse{0%{opacity:0.6}50%{opacity:1}100%{opacity:0.6}}
+
+    /* Decorative animated sparks along the edges */
+    .spark{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--electric);box-shadow:0 0 12px var(--electric);opacity:0.85;animation:zap 1.6s linear infinite}
+    .spark.s1{top:-6px;left:6%;animation-delay:0.0s}
+    .spark.s2{top:-6px;left:40%;animation-delay:0.2s}
+    .spark.s3{top:-6px;left:72%;animation-delay:0.4s}
+    .spark.s4{bottom:-6px;left:18%;animation-delay:0.7s}
+    .spark.s5{bottom:-6px;left:58%;animation-delay:0.5s}
+    .spark.s6{left:-6px;top:30%;animation-delay:0.3s}
+    .spark.s7{right:-6px;top:60%;animation-delay:0.6s}
+    @keyframes zap{0%{transform:translateY(0) scale(0.8)}50%{transform:translateY(6px) scale(1.2);opacity:1}100%{transform:translateY(0) scale(0.8);opacity:0.5}}
+
+    /* Container for header and cards */
+    .panel{position:relative;z-index:3;display:flex;flex-direction:column;gap:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    header h1{font-size:20px;letter-spacing:0.6px}
+    header p{opacity:0.8}
+
+    /* cards grid */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+    /* Glass card */
+    .card{
+      background: linear-gradient(180deg, rgba(10,18,30,0.25), rgba(8,14,24,0.28));
+      border:1px solid var(--glass-border);
+      padding:22px;border-radius:14px;backdrop-filter: blur(8px);-webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 6px 30px rgba(2,8,20,0.6);
+      position:relative;overflow:hidden;min-height:220px;display:flex;flex-direction:column;gap:12px;
+    }
+
+    /* subtle electric glow inside card corners */
+    .card:before{
+      content:"";position:absolute;inset:-40% -40%;background:radial-gradient(ellipse at top left, rgba(116,240,255,0.06), transparent 20%);
+      transform:rotate(-20deg);pointer-events:none
+    }
+
+    .card-top{display:flex;align-items:center;gap:14px}
+    .avatar{width:76px;height:76px;border-radius:50%;overflow:hidden;border:3px solid rgba(116,240,255,0.12);flex:0 0 76px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .meta{flex:1}
+    .meta h3{margin-bottom:4px;font-size:16px}
+    .meta p{font-size:13px;opacity:0.85}
+
+    /* rating */
+    .stars{display:flex;gap:6px;align-items:center}
+    .star{font-size:20px;cursor:pointer;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.6));transition:transform .12s}
+    .star:hover{transform:scale(1.12)}
+    .star.on{color:var(--accent);text-shadow:0 6px 18px rgba(54,198,255,0.12)}
+    .star.off{color:rgba(255,255,255,0.14)}
+
+    .desc{margin-top:6px;font-size:14px;line-height:1.4;opacity:0.95}
+
+    /* small electricity bolt icon near title */
+    .bolt{width:18px;height:18px;display:inline-block;vertical-align:middle;margin-left:8px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .cards{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      body{padding:20px}
+      .cards{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+    }
+
+    /* small helper for accessible focus */
+    .star:focus{outline:2px dashed rgba(116,240,255,0.15);outline-offset:3px}
+
+    /* electric border stronger */
+  .electric-border{
+    position:absolute;inset:-3px;border-radius:20px;
+    border:2px solid rgba(116,240,255,0.45);
+    box-shadow:0 0 25px rgba(116,240,255,0.35),0 0 45px rgba(54,198,255,0.25);
+    animation:borderZap 1.2s infinite linear;
+    pointer-events:none;
+  }
+  @keyframes borderZap{
+    0%{opacity:.65}50%{opacity:1}100%{opacity:.65}
+  }
+</style>
+
+
+<!-- todo##################################################### -->
+<!-- todo############# IAM ZOOOOOOOZ ######################### -->
+<!-- todo##################################################### -->
+<!-- todo##################################################### -->
+
+</head>
+<body>
+  <div class="electric-frame"><div class="electric-border"></div> 
+    <!-- animated sparks -->
+    <div class="spark s1"></div>
+    <div class="spark s2"></div>
+    <div class="spark s3"></div>
+    <div class="spark s4"></div>
+    <div class="spark s5"></div>
+    <div class="spark s6"></div>
+    <div class="spark s7"></div>
+
+    <div class="panel">
+      <header>
+        <div>
+          <h1></h1>
+          <p> </p>
+        </div>
+        <div aria-hidden="true">
+          <!-- small bolt svg -->
+          <svg class="bolt" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="url(#g)" />
+            <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#74f0ff" offset="0"/><stop stop-color="#36c6ff" offset="1"/></linearGradient></defs>
+          </svg>
+        </div>
+      </header>
+
+
+
+
+      <section class="cards" id="cards">
+        <!-- card template (3 copies) -->
+<article class="card" onclick="goCard1()" style="cursor:pointer">
+          <div class="card-top">
+            <div class="avatar">
+              <!-- placeholder avatar - replace src with real photo -->
+              <img src="https://uploads.teachablecdn.com/attachments/9VZHvaLPS9aDmGDzYjjj_Elzero.png" alt="صورة المدرب"> <!--?==========################-->
+            </div>
+            <div class="meta">
+              <h3>Elzero</h3>
+              
+              <div class="stars" data-rating="5" tabindex="0" aria-label="تقييم المدرب">
+                <span class="star" data-value="1" role="button" aria-label="نجمة 1">★</span>
+                <span class="star" data-value="2" role="button" aria-label="نجمة 2">★</span>
+                <span class="star" data-value="3" role="button" aria-label="نجمة 3">★</span>
+                <span class="star" data-value="4" role="button" aria-label="نجمة 4">★</span>
+                <span class="star" data-value="5" role="button" aria-label="نجمة 5">★</span>
+              </div>
+            </div>
+          </div>
+          <div class="desc">"Elzero is one of the most inspiring Arabic tech educators,
+ known for explaining complex topics in 
+ a simple and enjoyable way</div>
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card" onclick="goCard2()" style="cursor:pointer">
+
+          <div class="card-top">
+            <div class="avatar"><img src="https://static.skillshare.com/uploads/users/902314267/user-image-large.png?289725552" alt="صورة المدرب"></div>
+            <div class="meta">
+              <h3>Eng: Ahmed Adel</h3>
+            
+              <div class="stars" data-rating="4" tabindex="0" aria-label="تقييم المدرب">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+            </div>
+          </div>
+          <div class="desc">"Ahmed Adel, the creator of 'Learn Simply', is known
+             for his clear and straightforward teaching style that makes
+              complex tech topics easy to understand." </div>
+        </article>
+
+
+
+
+
+       <article class="card" onclick="goCard3()" style="cursor:pointer">
+
+          <div class="card-top">
+            <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThHgw3CiV6sPpA6sf7Ltp3RDXph8Z8hvFzTw&s" alt="صورة المدرب"></div>
+            <div class="meta">
+              <h3>Bro code</h3>
+              
+              <div class="stars" data-rating="5" tabindex="0" aria-label="تقييم المدرب">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+            </div>
+          </div>
+          <div class="desc">This course is only in english , Learn c++ in a viedo </div>
+        </article>
+
+      </section>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    // Initialize stars based on data-rating and make them clickable to set rating
+    document.querySelectorAll('.stars').forEach(starBox => {
+      const stars = Array.from(starBox.querySelectorAll('.star'));
+      const init = parseInt(starBox.getAttribute('data-rating')) || 0;
+      const set = (n) => {
+        starBox.setAttribute('data-rating', n);
+        stars.forEach(s => s.classList.toggle('on', parseInt(s.dataset.value) <= n));
+        stars.forEach(s => s.classList.toggle('off', parseInt(s.dataset.value) > n));
+      }
+      // initial paint
+      set(init);
+
+      // click handlers
+      stars.forEach(s => {
+        s.addEventListener('click', () => set(parseInt(s.dataset.value)));
+        s.addEventListener('keydown', (e) => {
+          if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); set(parseInt(s.dataset.value)); }
+        });
+      });
+
+      // keyboard left/right support on the container
+      starBox.addEventListener('keydown', (e)=>{
+        let cur = parseInt(starBox.getAttribute('data-rating')) || 0;
+        if(e.key === 'ArrowRight' || e.key === 'ArrowUp'){ if(cur<5) set(cur+1); }
+        if(e.key === 'ArrowLeft' || e.key === 'ArrowDown'){ if(cur>0) set(cur-1); }
+      });
+    });
+
+    // Optional: make cards easily editable via JS (replace avatar / name / desc)
+    // You can later add functions to update content dynamically or fetch from an API.
+
+function goCard1(){
+    window.location.href = '../learnc++.html';
+}
+
+function goCard2(){
+    window.location.href = '../c++_ahmed/learn_c__.html';
+}
+
+function goCard3(){
+    window.location.href = 'course3.html';
+}
+
+
+</script>
+</body>
+</html>

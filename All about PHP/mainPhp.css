@@ -36,6 +36,7 @@ body {
 .container {
   display: flex;
   flex: 1;
+  flex-wrap: wrap; /* مهم لاستجابة sidebar فوق على الموبايل */
 }
 
 /* 🔹 Sidebar */
@@ -52,6 +53,7 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
+  z-index: 5;
 }
 
 .sidebar h2 {
@@ -202,7 +204,7 @@ body {
   margin-top: 30px;
 }
 
-/* ✅ إعدادات الكويز (رجعت لشكلها الأصلي بالأزرق) */
+/* ✅ إعدادات الكويز */
 .quiz-settings {
   display: flex;
   flex-direction: column;
@@ -373,15 +375,6 @@ body {
   box-shadow: 0 0 10px #3399ff inset;
 }
 
-
-
-
-
-
-
-
-
-
 /* 🎨 تنسيق نظام الرانك */
 #rank-section {
   background: rgba(255, 255, 255, 0.08);
@@ -418,13 +411,9 @@ body {
   text-shadow: 0 0 10px #ffae00;
 }
 
+/* 📱 Media Queries for full responsiveness */
 
-
-
-
-
-/* 📱 Media Queries for full responsiveness without changing style */
-
+/* Tablet */
 @media (max-width: 1024px) {
   .navbar {
     left: 200px;
@@ -440,6 +429,7 @@ body {
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .navbar {
     position: relative;
@@ -456,9 +446,8 @@ body {
     border: none;
     box-shadow: none;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; /* Sidebar فوق المحتوى */
+    flex-wrap: nowrap;
     padding: 10px;
   }
 
@@ -486,6 +475,7 @@ body {
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .navbar {
     font-size: 1rem;
@@ -525,26 +515,5 @@ body {
   .footer {
     font-size: 0.9rem;
     padding: 10px;
-  }
-}
-/* 📱 Responsive scaling - keep layout same but smaller on phone */
-@media (max-width: 1024px) {
-  body {
-    transform: scale(0.9);
-    transform-origin: top center;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    transform: scale(0.8);
-    transform-origin: top center;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    transform: scale(0.7);
-    transform-origin: top center;
   }
 }

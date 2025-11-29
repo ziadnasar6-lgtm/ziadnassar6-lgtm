@@ -1,20 +1,13 @@
 
 
-
-
-
-
-
-
-
 // ========== إعداد عند تحميل الصفحة ========== //
 // window.addEventListener("DOMContentLoaded", () => {
 
   // ✅ قائمة الدروس
-  const allLessons = [
+ const allLessons = [
     {
       id: 1,
-      title: "Lesson 1",
+      title: "Lesson  ....one",
       video: "https://www.youtube.com/watch?v=your_video_link_1",
       description: [
         "Learn what C++ is and how it became one of the most popular programming languages.",
@@ -35,98 +28,6 @@
           correct: 0,
           explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
         },
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
-
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
         ,
         
         {
@@ -142,7 +43,7 @@
 
 {
       id: 2,
-      title: "Lesson 2",
+      title: "Lesson..... Two",
       video: "https://www.youtube.com/watch?v=your_video_link_1",
       description: [
         "Learn what C++ is and how it became one of the most popular programming languages.",
@@ -193,68 +94,6 @@
         },
 
 
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
-
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
         ,
         
         {
@@ -271,7 +110,7 @@
 
 {
       id: 3,
-      title: "Lesson 3",
+      title: "Lesson .....three",
       video: "https://www.youtube.com/watch?v=your_video_link_1",
       description: [
         "Learn what C++ is and how it became one of the most popular programming languages.",
@@ -292,84 +131,7 @@
           correct: 0,
           explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
         },
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
-
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
+       
         {
           question: "Which company first implemented C++?",
           options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
@@ -400,7 +162,7 @@
 
 {
       id: 4,
-      title: "Lesson 4",
+      title: "Lesson ..... four",
       video: "https://www.youtube.com/watch?v=your_video_link_1",
       description: [
         "Learn what C++ is and how it became one of the most popular programming languages.",
@@ -428,58 +190,7 @@
           explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
         },
 
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
+        
 
         ,
         
@@ -531,7 +242,7 @@
 
 {
       id: 5,
-      title: "Lesson 5",
+      title: "Lesson ..... five",
       video: "https://www.youtube.com/watch?v=your_video_link_1",
       description: [
         "Learn what C++ is and how it became one of the most popular programming languages.",
@@ -559,12 +270,6 @@
           explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
         },
 
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
 
         {
           question: "Who created C++?",
@@ -573,54 +278,6 @@
           explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
         },
 
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
-
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
         
         {
           question: "Which company first implemented C++?",
@@ -661,7 +318,7 @@
 
 {
       id: 6,
-      title: "Lesson 6",
+      title: "Lesson .....Sex",
       video: "https://www.youtube.com/watch?v=your_video_link_1",
       description: [
         "Learn what C++ is and how it became one of the most popular programming languages.",
@@ -712,12 +369,6 @@
         },
 
 
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
 
         {
           question: "Who created C++?",
@@ -742,38 +393,7 @@
         }
 
 
-        ,
         
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
         ,
         
         {
@@ -789,7 +409,7 @@
 
 {
       id: 7,
-      title: "Lesson 7",
+      title: "Lesson ..... seven",
       video: "https://www.youtube.com/watch?v=your_video_link_1",
       description: [
         "Learn what C++ is and how it became one of the most popular programming languages.",
@@ -840,54 +460,9 @@
         },
 
 
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
+       
 
 
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
-
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
         {
           question: "Which company first implemented C++?",
           options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
@@ -919,7 +494,7 @@
 
 {
       id: 8,
-      title: "Lesson 8",
+      title: "Lesson ..... eigt",
       video: "https://www.youtube.com/watch?v=your_video_link_1",
       description: [
         "Learn what C++ is and how it became one of the most popular programming languages.",
@@ -962,54 +537,9 @@
         },
 
 
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
+       
 
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
-
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
+      
         {
           question: "Which company first implemented C++?",
           options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
@@ -1048,7 +578,7 @@
 
 {
       id: 9,
-      title: "Lesson 9",
+      title: "Lesson ..... nine",
       video: "https://www.youtube.com/watch?v=your_video_link_1",
       description: [
         "Learn what C++ is and how it became one of the most popular programming languages.",
@@ -1091,54 +621,8 @@
         },
 
 
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
-
-        ,
         
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
+
         {
           question: "Which company first implemented C++?",
           options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
@@ -1178,7 +662,7 @@
  
  {
       id: 10,
-      title: "Lesson 10",
+      title: "Lesson ..... ten",
       video: "https://www.youtube.com/watch?v=your_video_link_1",
       description: [
         "Learn what C++ is and how it became one of the most popular programming languages.",
@@ -1221,42 +705,7 @@
         },
 
 
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
+       
 
 
         ,
@@ -1456,68 +905,7 @@
           correct: 0,
           explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
         },
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
-
-        ,
-        
+       
         {
           question: "Which company first implemented C++?",
           options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
@@ -1526,22 +914,7 @@
         }
         ,
         
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
+     
         {
           question: "Which company first implemented C++?",
           options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
@@ -1614,69 +987,8 @@
         },
 
 
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
-
-        ,
         
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
+   
         
         {
           question: "Which company first implemented C++?",
@@ -1716,93 +1028,7 @@
           correct: 0,
           explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
         },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
-
-        ,
         
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
         
         {
           question: "Which company first implemented C++?",
@@ -1836,92 +1062,9 @@
           correct: 0,
           explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
         },
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
+      
 
 
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-        {
-          question: "Who created C++?",
-          options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
-          correct: 0,
-          explanation: "C++ was created by Bjarne Stroustrup in 1979 as an extension of the C language."
-        },
-
-
-        {
-          question: "What is the file extension for C++ files?",
-          options: [".py", ".cpp", ".java", ".cs"],
-          correct: 1,
-          explanation: "C++ source files use the .cpp extension."
-        },
-
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-
-
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
-        {
-          question: "Which company first implemented C++?",
-          options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
-          correct: 1,
-          explanation: "C++ was developed at Bell Labs."
-        }
-        ,
-        
         {
           question: "Which company first implemented C++?",
           options: ["Microsoft", "Bell Labs", "IBM", "Apple"],
@@ -1951,6 +1094,7 @@
  
   ];
 
+  
   // ✅ عناصر الصفحة
   const lessonsGrid = document.getElementById("lessonsGrid");
   const lessonTitle = document.getElementById("lessonTitle");
@@ -1974,7 +1118,11 @@ let unlockedLessons = JSON.parse(localStorage.getItem(`${subjectKey}_unlockedLes
 
   // ✅ إنشاء بطاقات الدروس
 
-  // ✅ إنشاء بطاقات الدروس
+
+
+
+
+// ================= إنشاء بطاقات الدروس =================
 allLessons.forEach((lesson, index) => {
   const card = document.createElement("div");
   const isUnlocked = unlockedLessons.includes(index);
@@ -1982,7 +1130,7 @@ allLessons.forEach((lesson, index) => {
   card.className = `lesson-box ${isUnlocked ? "" : "locked"}`;
   card.innerHTML = `
     <h3>${lesson.title}</h3>
-        <span class="lock-icon">${isUnlocked ? "🔓" : "🔒"}</span>
+    <span class="lock-icon">${isUnlocked ? "🔓" : "🔒"}</span>
   `;
 
   card.addEventListener("click", () => {
@@ -1996,210 +1144,172 @@ allLessons.forEach((lesson, index) => {
   lessonsGrid.appendChild(card);
 });
 
+// ================= عرض تفاصيل الدرس =================
+function showLesson(lesson, index) {
+  currentLesson = lesson;
+  lessonTitle.textContent = lesson.title;
+  lessonDesc.innerHTML = `${lesson.description[0]}<br>${lesson.description[1]}`;
+  watchBtn.onclick = () => window.open(lesson.video, "_blank");
 
-  // ✅ عرض تفاصيل الدرس
-  function showLesson(lesson, index) {
-    currentLesson = lesson;
-    lessonTitle.textContent = lesson.title;
-    lessonDesc.innerHTML = `${lesson.description[0]}<br>${lesson.description[1]}`;
-    watchBtn.onclick = () => window.open(lesson.video, "_blank");
+  quizContainer.innerHTML = "";
+  startQuizBtn.style.display = "block";
+  startQuizBtn.dataset.lessonIndex = index;
+  startQuizBtn.type = "button"; // مهم جدًا
+  window.scrollTo({ top: lessonTitle.offsetTop, behavior: "smooth" });
+}
 
-    quizContainer.innerHTML = "";
-    startQuizBtn.style.display = "block";
-    startQuizBtn.dataset.lessonIndex = index;
-    window.scrollTo({ top: lessonTitle.offsetTop, behavior: "smooth" });
+// ================= بدء الاختبار =================
+startQuizBtn.addEventListener("click", () => {
+  if (!currentLesson) {
+    alert("Please select a lesson first!");
+    return;
   }
 
-  // ✅ بدء الاختبار
-  startQuizBtn.addEventListener("click", () => {
-    if (!currentLesson) {
-      alert("Please select a lesson first!");
-      return;
-    }
-
-    const questionCount = prompt("How many questions do you want? (max " + currentLesson.questions.length + ")", currentLesson.questions.length);
-    let count = parseInt(questionCount);
-    if (isNaN(count) || count < 1) count = currentLesson.questions.length;
-
-    let questions = currentLesson.questions.slice(0, count);
-    quizContainer.innerHTML = "";
-
-    // 🔹 عرض الأسئلة بمسافات
-    questions.forEach((q, index) => {
-      const qBox = document.createElement("div");
-      qBox.className = "question-box";
-      qBox.style.marginBottom = "25px";
-      qBox.innerHTML = `
-        <h3>${index + 1}. ${q.question}</h3>
-        ${q.options
-          .map(
-            (opt, i) => `
-          <label class="option-row" style="display:block; margin-top:8px;">
-            <input type="radio" name="q${index}" value="${i}">
-            ${opt}
-          </label>
-        `
-          )
-          .join("")}
-      `;
-      quizContainer.appendChild(qBox);
-    });
-
-    // زر الإرسال
-
-
-
-// ✅ زر الإرسال
-const submitBtn = document.createElement("button");
-submitBtn.textContent = "Send Answers ";
-submitBtn.className = "start-btn";
-quizContainer.appendChild(submitBtn);
-
-submitBtn.onclick = () => {
-  let correctCount = 0;
-  const userAnswers = [];
-
-  // ✅ جمع الإجابات أولاً
-  questions.forEach((q, index) => {
-    const selected = quizContainer.querySelector(`input[name="q${index}"]:checked`);
-    const userAnswer = selected ? parseInt(selected.value) : -1;
-    userAnswers.push(userAnswer);
-    if (userAnswer === q.correct) correctCount++;
-  });
-
-  // ✅ امسح الأسئلة
+  // عدد الأسئلة ثابت حسب الدرس
+  let questions = currentLesson.questions.slice(0, currentLesson.questionCount || currentLesson.questions.length);
   quizContainer.innerHTML = "";
 
-
-
-
-
-
-
-
-
-
-
-
-  // ✅ إنشاء إشعار مؤقت (Popup)
-  const feedbackMsg = document.createElement("div");
-  feedbackMsg.style.position = "fixed";
-  feedbackMsg.style.top = "30px";
-  feedbackMsg.style.left = "50%";
-  feedbackMsg.style.transform = "translateX(-50%)";
-  feedbackMsg.style.padding = "15px 25px";
-  feedbackMsg.style.borderRadius = "12px";
-  feedbackMsg.style.fontSize = "18px";
-  feedbackMsg.style.fontWeight = "bold";
-  feedbackMsg.style.zIndex = "9999";
-  feedbackMsg.style.transition = "opacity 0.5s ease";
-  feedbackMsg.style.boxShadow = "0 0 20px rgba(0,255,100,0.6)";
-
-  const successRate = correctCount / questions.length;
-
-  if (successRate >= 0.9) {
-    feedbackMsg.textContent = "🎯 Wow your answer is wonderfull😍";
-    feedbackMsg.style.background = "rgba(0,255,100,0.9)";
-    feedbackMsg.style.color = "#000";
-  } else if (successRate >= 0.5) {
-    feedbackMsg.textContent = "👍 You are good man 💪";
-    feedbackMsg.style.background = "rgba(255,215,0,0.9)";
-    feedbackMsg.style.color = "#000";
-  } else {
-    feedbackMsg.textContent = "😅 Dont worry try again ";
-    feedbackMsg.style.background = "rgba(255,80,80,0.9)";
-    feedbackMsg.style.color = "#fff";
-  }
-
-  document.body.appendChild(feedbackMsg);
-
-  // 🔥 اختفاء الإشعار بعد 3 ثواني
-  setTimeout(() => {
-    feedbackMsg.style.opacity = "0";
-    setTimeout(() => feedbackMsg.remove(), 500);
-  }, 5000);
-
-  // ✅ عرض النتائج أسفل بعد سكرول ناعم
-  window.scrollTo({ top: quizContainer.offsetTop - 50, behavior: "smooth" });
-
+  // عرض الأسئلة
   questions.forEach((q, index) => {
-    const userAnswer = userAnswers[index];
-    const isCorrect = userAnswer === q.correct;
-
-    const resultBox = document.createElement("div");
-    resultBox.className = "question-result";
-    resultBox.style.border = "2px solid " + (isCorrect ? "#00ff99" : "#ff4d4d");
-    resultBox.style.background = isCorrect
-      ? "rgba(0,255,100,0.1)"
-      : "rgba(255,80,80,0.1)";
-    resultBox.style.borderRadius = "10px";
-    resultBox.style.padding = "15px";
-    resultBox.style.marginBottom = "20px";
-    resultBox.style.boxShadow = isCorrect
-      ? "0 0 10px #00ff88"
-      : "0 0 10px #ff4d4d";
-
-    resultBox.innerHTML = `
+    const qBox = document.createElement("div");
+    qBox.className = "question-box";
+    qBox.style.marginBottom = "25px";
+    qBox.innerHTML = `
       <h3>${index + 1}. ${q.question}</h3>
-      <p><strong> Your answer: </strong> ${
-        userAnswer >= 0 ? q.options[userAnswer] : "You have not answered yet !!"
-      }</p>
-      <p><strong> The right : </strong> ${q.options[q.correct]}</p>
-      <p class="explanation">💡 ${q.explanation}</p>
+      ${q.options
+        .map(
+          (opt, i) => `
+        <label class="option-row" style="display:block; margin-top:8px;">
+          <input type="radio" name="q${index}" value="${i}">
+          ${opt}
+        </label>
+      `
+        )
+        .join("")}
     `;
-    quizContainer.appendChild(resultBox);
+    quizContainer.appendChild(qBox);
   });
 
+  // زر الإرسال
+  const submitBtn = document.createElement("button");
+  submitBtn.type = "button"; // مهم جدًا
+  submitBtn.textContent = "Send Answers";
+  submitBtn.className = "start-btn";
+  quizContainer.appendChild(submitBtn);
 
+  submitBtn.onclick = () => {
+    let correctCount = 0;
+    const userAnswers = [];
 
+    // جمع الإجابات
+    questions.forEach((q, index) => {
+      const selected = quizContainer.querySelector(`input[name="q${index}"]:checked`);
+      const userAnswer = selected ? parseInt(selected.value) : -1;
+      userAnswers.push(userAnswer);
+      if (userAnswer === q.correct) correctCount++;
+    });
 
+    // مسح الأسئلة
+    quizContainer.innerHTML = "";
 
+    // إنشاء إشعار مؤقت
+    const feedbackMsg = document.createElement("div");
+    feedbackMsg.style.position = "fixed";
+    feedbackMsg.style.top = "30px";
+    feedbackMsg.style.left = "50%";
+    feedbackMsg.style.transform = "translateX(-50%)";
+    feedbackMsg.style.padding = "15px 25px";
+    feedbackMsg.style.borderRadius = "12px";
+    feedbackMsg.style.fontSize = "18px";
+    feedbackMsg.style.fontWeight = "bold";
+    feedbackMsg.style.zIndex = "9999";
+    feedbackMsg.style.transition = "opacity 0.5s ease";
+    feedbackMsg.style.boxShadow = "0 0 20px rgba(0,255,100,0.6)";
 
+    const successRate = correctCount / questions.length;
 
-// ✅ زر الإنهاء
-const doneBtn = document.createElement("button");
-doneBtn.textContent = "✅ Done ";
-doneBtn.className = "watch-btn";
-doneBtn.style.marginTop = "15px";
-quizContainer.appendChild(doneBtn);
-
-doneBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
-  if (successRate >= 0.5) {
-    // ⭐ أضف نجمة واحفظها بعد تسليم الواجب بنجاح
-    stars++;
-    localStorage.setItem(`${subjectKey}_stars`, JSON.stringify(stars));
-
-    // 🔥 حدّث عرض النجوم والتيجان واللقب
-    updateStars(stars);
-
-    // 🔓 افتح الدرس التالي لو موجود
-    const currentIndex = allLessons.indexOf(currentLesson);
-    if (currentIndex < allLessons.length - 1 && !unlockedLessons.includes(currentIndex + 1)) {
-      unlockedLessons.push(currentIndex + 1);
-      localStorage.setItem(`${subjectKey}_unlockedLessons`, JSON.stringify(unlockedLessons));
-      updateLessonLocks();
-      alert("🎉 Great work! Next lesson unlocked 👏");
+    if (successRate >= 0.9) {
+      feedbackMsg.textContent = "🎯 Wow your answer is wonderful😍";
+      feedbackMsg.style.background = "rgba(0,255,100,0.9)";
+      feedbackMsg.style.color = "#000";
+    } else if (successRate >= 0.5) {
+      feedbackMsg.textContent = "👍 You are good man 💪";
+      feedbackMsg.style.background = "rgba(255,215,0,0.9)";
+      feedbackMsg.style.color = "#000";
+    } else {
+      feedbackMsg.textContent = "😅 Don't worry, try again";
+      feedbackMsg.style.background = "rgba(255,80,80,0.9)";
+      feedbackMsg.style.color = "#fff";
     }
-  }
-};
 
-    // 🔄 أعد تحميل الصفحة بعد النجاح فقط
+    document.body.appendChild(feedbackMsg);
     setTimeout(() => {
-      location.reload();
-    }, 1200); // ممكن تعدّل الوقت حسب ما تحب
+      feedbackMsg.style.opacity = "0";
+      setTimeout(() => feedbackMsg.remove(), 500);
+    }, 3000);
 
+    window.scrollTo({ top: quizContainer.offsetTop - 50, behavior: "smooth" });
 
+    // عرض النتائج
+    questions.forEach((q, index) => {
+      const userAnswer = userAnswers[index];
+      const isCorrect = userAnswer === q.correct;
 
-};
-  });
+      const resultBox = document.createElement("div");
+      resultBox.className = "question-result";
+      resultBox.style.border = "2px solid " + (isCorrect ? "#00ff99" : "#ff4d4d");
+      resultBox.style.background = isCorrect
+        ? "rgba(0,255,100,0.1)"
+        : "rgba(255,80,80,0.1)";
+      resultBox.style.borderRadius = "10px";
+      resultBox.style.padding = "15px";
+      resultBox.style.marginBottom = "20px";
+      resultBox.style.boxShadow = isCorrect
+        ? "0 0 10px #00ff88"
+        : "0 0 10px #ff4d4d";
 
-// ✅ دالة تحديث النجوم والتيجان واللقب
-function updateStars() {
-  // 🟢 تحميل عدد النجوم من localStorage باستخدام subjectKey
-  const stars = JSON.parse(localStorage.getItem(`${subjectKey}_stars`)) || 0;
+      resultBox.innerHTML = `
+        <h3>${index + 1}. ${q.question}</h3>
+        <p><strong>Your answer:</strong> ${
+          userAnswer >= 0 ? q.options[userAnswer] : "You have not answered yet!"
+        }</p>
+        <p><strong>The right answer:</strong> ${q.options[q.correct]}</p>
+        <p class="explanation">💡 ${q.explanation}</p>
+      `;
+      quizContainer.appendChild(resultBox);
+    });
 
+    // زر الإنهاء
+    const doneBtn = document.createElement("button");
+    doneBtn.type = "button"; // مهم جدًا
+    doneBtn.textContent = "✅ Done";
+    doneBtn.className = "watch-btn";
+    doneBtn.style.marginTop = "15px";
+    quizContainer.appendChild(doneBtn);
+
+    doneBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (successRate >= 0.5) {
+        // إضافة نجمة وحفظها
+        stars++;
+        localStorage.setItem("stars", JSON.stringify(stars));
+        updateStars(stars);
+
+        // فتح الدرس التالي
+        const currentIndex = allLessons.indexOf(currentLesson);
+        if (currentIndex < allLessons.length - 1 && !unlockedLessons.includes(currentIndex + 1)) {
+          unlockedLessons.push(currentIndex + 1);
+          localStorage.setItem("unlockedLessons", JSON.stringify(unlockedLessons));
+          updateLessonLocks();
+          alert("🎉 Great work! Next lesson unlocked 👏");
+        }
+      }
+    };
+  };
+});
+
+// ================= دالة تحديث النجوم =================
+function updateStars(stars) {
   const starsContainer = document.getElementById("starsContainer");
   const rankTitle = document.getElementById("rank-title");
   const starsSection = document.getElementById("stars-container");
@@ -2228,23 +1338,22 @@ function updateStars() {
   }
 
   let rank = "";
-  if (stars < 5) rank = " Cat";
-  else if (stars < 10) rank = " Forest Cat";
-  else if (stars < 15) rank = " Strong Tiger";
-  else if (stars < 20) rank = " Fierce Lion";
+  if (stars < 5) rank = "Cat";
+  else if (stars < 10) rank = "Forest Cat";
+  else if (stars < 15) rank = "Strong Tiger";
+  else if (stars < 20) rank = "Fierce Lion";
   else if (stars < 25) rank = "🐉 Dragon";
-  else if (stars < 30) rank = "De Dragon  👑";
+  else if (stars < 30) rank = "De Dragon 👑";
   else rank = "👑 Supreme Champion of C++ 🔥";
 
   if (rankTitle) rankTitle.textContent = rank;
 
   const progressPercent = Math.min((stars / totalStars) * 100, 100);
-
   const progressBar = document.createElement("div");
   progressBar.innerHTML = `
     <div style="width:100%; background:#ddd; height:15px; border-radius:10px; overflow:hidden; margin-top:10px;">
       <div style="
-        width:${progressPercent}% ;
+        width:${progressPercent}%;
         height:100%;
         background:linear-gradient(90deg, gold, orange);
         transition:width 0.5s ease;
@@ -2257,7 +1366,7 @@ function updateStars() {
   starsContainer.appendChild(progressBar);
 }
 
-// ✅ استدعاء الدالة بعد تحميل الصفحة
+// ================= استدعاء الدالة عند تحميل الصفحة =================
 document.addEventListener("DOMContentLoaded", () => {
-  updateStars();
+  updateStars(stars);
 });

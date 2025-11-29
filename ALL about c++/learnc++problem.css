@@ -85,6 +85,13 @@ body {
   box-shadow: 0 0 10px #33ccff, 0 0 20px #0099ff;
 }
 
+
+
+
+
+
+
+
 /* ========== MAIN CONTENT ========== */
 .main-content {
   margin-left: 260px;
@@ -133,6 +140,10 @@ body {
   opacity: 0.3;
   cursor: not-allowed;
 }
+
+
+
+
 
 /* ========== LESSON BOX ========== */
 .lesson-section {
