@@ -1092,6 +1092,7 @@
  
  
   ];
+
 // ================= عناصر الصفحة =================
 const lessonsGrid = document.getElementById("lessonsGrid");
 const lessonTitle = document.getElementById("lessonTitle");
@@ -1105,21 +1106,31 @@ let currentLesson = null;
 let stars = JSON.parse(localStorage.getItem("stars")) || 0;
 let unlockedLessons = JSON.parse(localStorage.getItem("unlockedLessons")) || [0];
 
-
-
+// ================= دالة تحديث الأقفال =================
+function updateLessonLocks() {
+  const cards = document.querySelectorAll("#lessonsGrid .lesson-box");
+  cards.forEach((card, index) => {
+    if (unlockedLessons.includes(index)) {
+      card.classList.remove("locked");
+      card.querySelector(".lock-icon").textContent = "🔓";
+    } else {
+      card.classList.add("locked");
+      card.querySelector(".lock-icon").textContent = "🔒";
+    }
+  });
+}
 
 // ================= إنشاء بطاقات الدروس =================
 allLessons.forEach((lesson, index) => {
   const card = document.createElement("div");
-  const isUnlocked = unlockedLessons.includes(index);
-
-  card.className = `lesson-box ${isUnlocked ? "" : "locked"}`;
+  card.className = `lesson-box ${unlockedLessons.includes(index) ? "" : "locked"}`;
   card.innerHTML = `
     <h3>${lesson.title}</h3>
-    <span class="lock-icon">${isUnlocked ? "🔓" : "🔒"}</span>
+    <span class="lock-icon">${unlockedLessons.includes(index) ? "🔓" : "🔒"}</span>
   `;
 
   card.addEventListener("click", () => {
+    const isUnlocked = unlockedLessons.includes(index); // ديناميكي
     if (!isUnlocked) {
       alert("🔒 You must complete the previous lesson first!");
       return;
@@ -1151,34 +1162,28 @@ startQuizBtn.addEventListener("click", () => {
     return;
   }
 
-  // عدد الأسئلة ثابت حسب الدرس
   let questions = currentLesson.questions.slice(0, currentLesson.questionCount || currentLesson.questions.length);
   quizContainer.innerHTML = "";
 
-  // عرض الأسئلة
   questions.forEach((q, index) => {
     const qBox = document.createElement("div");
     qBox.className = "question-box";
     qBox.style.marginBottom = "25px";
     qBox.innerHTML = `
       <h3>${index + 1}. ${q.question}</h3>
-      ${q.options
-        .map(
-          (opt, i) => `
+      ${q.options.map((opt, i) => `
         <label class="option-row" style="display:block; margin-top:8px;">
           <input type="radio" name="q${index}" value="${i}">
           ${opt}
         </label>
-      `
-        )
-        .join("")}
+      `).join("")}
     `;
     quizContainer.appendChild(qBox);
   });
 
   // زر الإرسال
   const submitBtn = document.createElement("button");
-  submitBtn.type = "button"; // مهم جدًا
+  submitBtn.type = "button";
   submitBtn.textContent = "Send Answers";
   submitBtn.className = "start-btn";
   quizContainer.appendChild(submitBtn);
@@ -1187,7 +1192,6 @@ startQuizBtn.addEventListener("click", () => {
     let correctCount = 0;
     const userAnswers = [];
 
-    // جمع الإجابات
     questions.forEach((q, index) => {
       const selected = quizContainer.querySelector(`input[name="q${index}"]:checked`);
       const userAnswer = selected ? parseInt(selected.value) : -1;
@@ -1195,10 +1199,9 @@ startQuizBtn.addEventListener("click", () => {
       if (userAnswer === q.correct) correctCount++;
     });
 
-    // مسح الأسئلة
     quizContainer.innerHTML = "";
 
-    // إنشاء إشعار مؤقت
+    // إشعار مؤقت
     const feedbackMsg = document.createElement("div");
     feedbackMsg.style.position = "fixed";
     feedbackMsg.style.top = "30px";
@@ -1244,21 +1247,15 @@ startQuizBtn.addEventListener("click", () => {
       const resultBox = document.createElement("div");
       resultBox.className = "question-result";
       resultBox.style.border = "2px solid " + (isCorrect ? "#00ff99" : "#ff4d4d");
-      resultBox.style.background = isCorrect
-        ? "rgba(0,255,100,0.1)"
-        : "rgba(255,80,80,0.1)";
+      resultBox.style.background = isCorrect ? "rgba(0,255,100,0.1)" : "rgba(255,80,80,0.1)";
       resultBox.style.borderRadius = "10px";
       resultBox.style.padding = "15px";
       resultBox.style.marginBottom = "20px";
-      resultBox.style.boxShadow = isCorrect
-        ? "0 0 10px #00ff88"
-        : "0 0 10px #ff4d4d";
+      resultBox.style.boxShadow = isCorrect ? "0 0 10px #00ff88" : "0 0 10px #ff4d4d";
 
       resultBox.innerHTML = `
         <h3>${index + 1}. ${q.question}</h3>
-        <p><strong>Your answer:</strong> ${
-          userAnswer >= 0 ? q.options[userAnswer] : "You have not answered yet!"
-        }</p>
+        <p><strong>Your answer:</strong> ${userAnswer >= 0 ? q.options[userAnswer] : "You have not answered yet!"}</p>
         <p><strong>The right answer:</strong> ${q.options[q.correct]}</p>
         <p class="explanation">💡 ${q.explanation}</p>
       `;
@@ -1267,7 +1264,7 @@ startQuizBtn.addEventListener("click", () => {
 
     // زر الإنهاء
     const doneBtn = document.createElement("button");
-    doneBtn.type = "button"; // مهم جدًا
+    doneBtn.type = "button";
     doneBtn.textContent = "✅ Done";
     doneBtn.className = "watch-btn";
     doneBtn.style.marginTop = "15px";
@@ -1276,17 +1273,16 @@ startQuizBtn.addEventListener("click", () => {
     doneBtn.onclick = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
       if (successRate >= 0.5) {
-        // إضافة نجمة وحفظها
         stars++;
         localStorage.setItem("stars", JSON.stringify(stars));
         updateStars(stars);
 
-        // فتح الدرس التالي
         const currentIndex = allLessons.indexOf(currentLesson);
-        if (currentIndex < allLessons.length - 1 && !unlockedLessons.includes(currentIndex + 1)) {
-          unlockedLessons.push(currentIndex + 1);
+        const nextIndex = currentIndex + 1;
+        if (nextIndex < allLessons.length && !unlockedLessons.includes(nextIndex)) {
+          unlockedLessons.push(nextIndex);
           localStorage.setItem("unlockedLessons", JSON.stringify(unlockedLessons));
-          updateLessonLocks();
+          updateLessonLocks(); // تحديث الأقفال مباشرة
           alert("🎉 Great work! Next lesson unlocked 👏");
         }
       }
@@ -1352,7 +1348,8 @@ function updateStars(stars) {
   starsContainer.appendChild(progressBar);
 }
 
-// ================= استدعاء الدالة عند تحميل الصفحة =================
+// ================= استدعاء الدوال عند تحميل الصفحة =================
 document.addEventListener("DOMContentLoaded", () => {
   updateStars(stars);
+  updateLessonLocks();
 });
