@@ -1,14 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
 // ========== إعداد عند تحميل الصفحة ========== //
 // window.addEventListener("DOMContentLoaded", () => {
 

@@ -13,7 +13,7 @@
   // دالة بسيطة تتأكد إن اللغة مدعومة
   function isSupported(lang) {
     if (!lang) return false;
-    return supportedLangs.includes(lang.toLowerCase());
+    // return supportedLangs.includes(lang.toLowerCase()); '.'
   }
 
   // دالة تحديد اللغة (تحليل سريع حسب كلمات المفتاح)
@@ -590,8 +590,6 @@ function buildChainReport(chains) {
 
   return out;
 }
-
-
   // Public API: analyzeChain accepts code, optional langHint, and optional existingIssues
   function analyzeChain(code, langHint, existingIssues) {
     const detect = window.TshatttoPart3_batch2?.detect || (()=>'unknown');

@@ -372,7 +372,7 @@ body {
 
 .side-link:active {
   transform: scale(0.98);
-  box-shadow: 0 0 10px #7733ff inset;
+  box-shadow: 0 0 10px #3399ff inset;
 }
 
 /* 🎨 تنسيق نظام الرانك */
