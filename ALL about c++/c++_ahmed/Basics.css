@@ -475,6 +475,9 @@ body {
   }
 }
 
+
+
+
 /* Small Mobile */
 @media (max-width: 480px) {
   .navbar {
@@ -515,5 +518,32 @@ body {
   .footer {
     font-size: 0.9rem;
     padding: 10px;
+  }
+}
+
+
+
+
+
+/* 🔐 Lock icon responsive fixes */
+@media (max-width: 768px) {
+  .lesson-box {
+    position: relative; /* تأكد إنه relative */
+  }
+
+  .lock-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em; /* أصغر شوية للموبايل */
+    z-index: 5; /* يضمن يظهر فوق كل العناصر */
+  }
+}
+
+@media (max-width: 480px) {
+  .lock-icon {
+    font-size: 1em; /* أصغر للشاشات الصغيرة جدًا */
+    top: 8px;
+    right: 8px;
   }
 }

@@ -1067,6 +1067,8 @@ function updateLessonLocks() {
 }
 
 // ================= إنشاء بطاقات الدروس =================
+
+
 allLessons.forEach((lesson, index) => {
   const card = document.createElement("div");
   card.className = `lesson-box ${unlockedLessons.includes(index) ? "" : "locked"}`;
