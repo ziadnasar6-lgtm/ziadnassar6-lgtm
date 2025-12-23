@@ -43,7 +43,7 @@ function startIntroSequence() {
   // Overlay
   const overlay = document.createElement("div");
   overlay.className = "intro-overlay";
-  overlay.innerHTML = `<h1 class="intro-text">⚔️ The Battle is about to begin!</h1>`;
+  overlay.innerHTML = `<h1 class="intro-text">⚔️ The Battle is about to begin! Problem solving</h1>`;
   document.body.appendChild(overlay);
 
   // موسيقى وخطاب المعلق

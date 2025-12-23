@@ -21,7 +21,7 @@ body {
   top: 0;
   left: 250px;
   width: calc(100% - 250px);
-  background: linear-gradient(90deg, #002266, #0044cc);
+  background: linear-gradient(90deg, #440841, #330552);
   color: white;
   padding: 15px 30px;
   font-size: 1.5rem;
@@ -47,8 +47,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-right: 2px solid #0066ff;
-  box-shadow: 0 0 15px #3399ff;
+  border-right: 2px solid #450e48;
+  box-shadow: 0 0 15px #9c33ff;
   position: fixed;
   height: 100vh;
   top: 0;
@@ -57,7 +57,7 @@ body {
 }
 
 .sidebar h2 {
-  color: #66aaff;
+  color: #8a2ce9;
   text-shadow: 0 0 10px #3399ff;
   margin-bottom: 10px;
 }
@@ -76,7 +76,7 @@ body {
 .progress-bar {
   width: 100%;
   height: 10px;
-  background: #00264d;
+  background: #260560;
   border-radius: 5px;
   overflow: hidden;
   margin-top: 5px;
@@ -97,7 +97,7 @@ body {
 .side-btn {
   display: block;
   width: 100%;
-  background: linear-gradient(90deg, #00264d, #003366);
+  background: linear-gradient(90deg, #43043e, #154473);
   color: white;
   border: none;
   border-radius: 10px;
@@ -151,17 +151,17 @@ body {
 
 .lesson-card {
   background: rgba(0, 25, 60, 0.8);
-  border: 1px solid #3399ff;
+  border: 1px solid #461051;
   border-radius: 15px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 0 10px #3399ff;
+  box-shadow: 0 0 10px #fb54f0;
   transition: 0.3s;
 }
 
 .lesson-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px #66ccff;
+  box-shadow: 0 0 25px #250842;
 }
 
 /* 🔸 Lesson Details */
@@ -214,7 +214,7 @@ body {
   padding: 15px;
   border-radius: 10px;
   margin: 15px 0;
-  box-shadow: 0 0 10px rgba(0, 120, 255, 0.4);
+  box-shadow: 0 0 10px rgba(76, 16, 225, 0.4);
   border: 1px solid #3399ff;
 }
 
@@ -307,8 +307,8 @@ body {
 
 .lesson-box {
   background: rgba(0, 20, 50, 0.7);
-  border: 2px solid #3399ff;
-  box-shadow: 0 0 15px #0066ff;
+  border: 2px solid #2d0d55af;
+  box-shadow: 0 0 15px #3f0e50;
   border-radius: 15px;
   padding: 20px;
   color: #e6f0ff;
