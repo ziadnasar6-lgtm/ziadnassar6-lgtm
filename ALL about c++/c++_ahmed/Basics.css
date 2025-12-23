@@ -342,6 +342,18 @@ body {
   color: #99ccff;
 }
 
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
+*/
+.lesson-box.locked {
+  opacity: 0.5;       /* الدرس باهت */
+  pointer-events: none; /* يمنع الضغط عليه */
+  cursor: default;
+  transition: opacity 0.3s ease;
+}
+
+
 /* ===== Sidebar Links ===== */
 .sidebar-buttons {
   display: flex;
@@ -508,6 +520,7 @@ body {
   .lessons-grid {
     grid-template-columns: 1fr;
     gap: 12px;
+    
   }
 
   .lesson-card,
@@ -536,7 +549,7 @@ body {
     top: 10px;
     right: 10px;
     font-size: 1.2em; /* أصغر شوية للموبايل */
-    z-index: 5; /* يضمن يظهر فوق كل العناصر */
+    z-index: 10; /* يضمن يظهر فوق كل العناصر */
   }
 }
 

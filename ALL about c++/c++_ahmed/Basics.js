@@ -793,7 +793,6 @@ questions: [
 
 
   ];
-
   
   
 // ================= عناصر الصفحة =================
@@ -806,25 +805,11 @@ const startQuizBtn = document.getElementById("startQuizBtn");
 const progressFill = document.getElementById("progressFill");
 
 // ===== مادة محددة =====
-const subjectKey = "c++ "; // غيّرها حسب المادة: "php", "html", ...
+const subjectKey = "B_c++ "; // غيّرها حسب المادة: "php", "html", ...
 let stars = JSON.parse(localStorage.getItem(`${subjectKey}_stars`)) || 0;
 let unlockedLessons = JSON.parse(localStorage.getItem(`${subjectKey}_unlockedLessons`)) || [0];
 
 let currentLesson = null;
-
-// ================= دالة تحديث الأقفال =================
-function updateLessonLocks() {
-  const cards = document.querySelectorAll("#lessonsGrid .lesson-box");
-  cards.forEach((card, index) => {
-    if (unlockedLessons.includes(index)) {
-      card.classList.remove("locked");
-      card.querySelector(".lock-icon").textContent = "🔓";
-    } else {
-      card.classList.add("locked");
-      card.querySelector(".lock-icon").textContent = "🔒";
-    }
-  });
-}
 
 // ================= إنشاء بطاقات الدروس =================
 allLessons.forEach((lesson, index) => {
@@ -832,12 +817,11 @@ allLessons.forEach((lesson, index) => {
   card.className = `lesson-box ${unlockedLessons.includes(index) ? "" : "locked"}`;
   card.innerHTML = `
     <h3>${lesson.title}</h3>
-    <span class="lock-icon">${unlockedLessons.includes(index) ? "🔓" : "🔒"}</span>
+    <p>${lesson.shortDesc}</p> <!-- اختياري: وصف قصير -->
   `;
 
   card.addEventListener("click", () => {
-    const isUnlocked = unlockedLessons.includes(index);
-    if (!isUnlocked) {
+    if (!unlockedLessons.includes(index)) {
       alert("🔒 You must complete the previous lesson first!");
       return;
     }
@@ -846,6 +830,21 @@ allLessons.forEach((lesson, index) => {
 
   lessonsGrid.appendChild(card);
 });
+
+
+
+
+function updateLessonLocks() {
+  const cards = document.querySelectorAll("#lessonsGrid .lesson-box");
+  cards.forEach((card, index) => {
+    if (unlockedLessons.includes(index)) {
+      card.classList.remove("locked"); // عادي
+    } else {
+      card.classList.add("locked");    // باهت
+    }
+  });
+}
+
 
 // ================= عرض تفاصيل الدرس =================
 function showLesson(lesson, index) {

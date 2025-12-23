@@ -7,6 +7,7 @@
   scroll-behavior: smooth;
 }
 
+
 /* Body */
 body {
   background: linear-gradient(180deg, #ffffff, #eaf3ff);
@@ -111,6 +112,52 @@ body {
   box-shadow: 0 0 1.8rem rgba(0, 119, 255, 0.9);
   transform: translateY(-0.3rem);
 }
+
+
+
+
+
+.image-container {
+  background: #23385b; /* خلفية داكنة مشابهة للصورة */
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 40px #66f0ff; /* تأثير glow حول المربع */
+  display: inline-block;
+  
+}
+
+.image-container img {
+  width: 300px ; /* حجم الصورة */
+  border-radius: 10px; /* حواف مدورة للصورة */
+  box-shadow: 0 0 20px #66f0ff; /* تأثير glow على الصورة نفسها */
+}
+
+.image-container h2 {
+  color: #aefcff;
+  text-shadow: 0 0 10px #66f0ff; /* تأثير توهج للنص */
+  margin: 15px 0 5px 0;
+}
+
+.image-container p {
+  color: #99dfff;
+  margin: 0;
+}
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-side, .right-side {
+        width: 100%;
+    }
+    .left-side img {
+        width: 60%;
+    }
+}
+
+
+
+
 
 /* Sections */
 .subjects,
