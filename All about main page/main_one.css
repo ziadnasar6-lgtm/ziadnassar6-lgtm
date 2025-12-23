@@ -128,7 +128,7 @@ body {
 }
 
 .image-container img {
-  width: 250px ; /* حجم الصورة */
+  width: 220px ; /* حجم الصورة */
   border-radius: 10px; /* حواف مدورة للصورة */
   box-shadow: 0 0 20px #66f0ff; /* تأثير glow على الصورة نفسها */
   padding: 10px ;
