@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html{scroll-behavior: smooth;}
 body {
   background: linear-gradient(to bottom, #0a0a12, #001f3f, #0044cc);
   color: #f1f1f1;

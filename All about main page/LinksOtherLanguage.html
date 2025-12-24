@@ -11,12 +11,6 @@
 
 
 
-
-
-
-
-
-
 </head>
 <body>
 
@@ -92,16 +86,18 @@
 <!-- 🔗 لينكات داخل HTML -->
 
 <div class="hidden-links">
-  <a href="../ALL about other Language/All about canvas/canvas.html">Canvas</a>
-  <a href="../ALL about other Language/All about NodeJS/nodejs.html">NodeJS</a>
-  <a href="../ALL about other Language/All about React JS/react.html">ReactJS</a>
+  <!-- <a href="../ALL about other Language/All about canvas/canvas.html">Canvas</a> -->
+  <a href="#"></a>
+  <a href="#"></a>
   <a href="../ALL about other Language/All about SQL/sql.html">SQL</a>
   <a href="../ALL about other Language/Alla bout JSON/json.html">JSON</a>
   <a href="https://example.com/6">Java</a> 
-  <a href="../ALL about other Language/All about Typescribt/typescribt.html">TypeScript</a>
+  <a href="../ALL about other Language/All about canvas/canvas.html"><span class="z">Canvas</span></a>
   <a href="../ALL about other Language/Alla bout rust/rust.html">Rust</a>
-  <a href="../ALL about other Language/All about Assambly/Assambly.html">Assembly</a>
+  <a href="../ALL about other Language/All about Assambly/Assambly.html"><span class="z">Assembly</span></a>
   <a href="#">C#</a>
+  <a href="../ALL about other Language/All about NodeJS/nodejs.html">Nodejs</a>
+  <a href="../ALL about other Language/All about React JS/react.html">React</a>
 </div>
 <canvas id="background"></canvas>
 
@@ -197,35 +193,53 @@
 
   let circles = [];
 
-  function arrangeCircles() {
-    circles = [];
-    const marginX = width * 0.015;
-    const marginY = height * 0.015;
-    const usableWidth = width - marginX * 2;
-    const usableHeight = height - marginY * 2;
 
-    const layout = [3, 4, 3];
-    let index = 0;
-    const rowHeight = usableHeight / layout.length;
+function arrangeCircles() {
+  circles = [];
+  const marginX = width * 0.02;
+  const marginY = height * 0.02;
+  const usableWidth = width - marginX * 2;
+  const usableHeight = height - marginY * 2;
 
-    layout.forEach((count, rowIndex) => {
-      const y = marginY + rowHeight * (rowIndex + 0.5);
-      const spacing = usableWidth / (count + 1);
-      for (let i = 0; i < count; i++) {
-        if (index >= data.length) break;
-        const x = marginX + spacing * (i + 1);
-        const { link, label } = data[index++];
-        circles.push(new GlowCircle(link, label, x, y));
-      }
-    });
+  let layout;
+  if (width <= 480) {
+    layout = [2, 2, 2, 2, 2]; // موبايل: كل صف فيه 2 دوائر
+  } else if (width <= 768) {
+    layout = [3, 3, 3, 2]; // تابلت: صفوف متنوعة
+  } else if (width <= 1024) {
+    layout = [3, 4, 3]; // لاب توب صغير
+  } else {
+    layout = [3, 4, 3]; // ديسكتوب كبير
   }
 
-  function updateCircleSizes() {
-    const base = Math.min(window.innerWidth, window.innerHeight);
-    circles.forEach(c => {
-      c.radius = base < 600 ? 90 : base < 900 ? 140 : 200;
-    });
-  }
+  let index = 0;
+  const rowHeight = usableHeight / layout.length;
+
+  layout.forEach((count, rowIndex) => {
+    const y = marginY + rowHeight * (rowIndex + 0.5);
+    const spacing = usableWidth / (count + 1);
+    for (let i = 0; i < count; i++) {
+      if (index >= data.length) break;
+      const x = marginX + spacing * (i + 1);
+      const { link, label } = data[index++];
+      circles.push(new GlowCircle(link, label, x, y));
+    }
+  });
+}
+
+function updateCircleSizes() {
+  circles.forEach(c => {
+    if (width <= 480) c.radius = 120;   // موبايل
+    else if (width <= 768) c.radius = 170; // تابلت
+    else if (width <= 1024) c.radius = 200; // لاب توب صغير
+    else c.radius = 250; // ديسكتوب كبير
+  });
+}
+
+
+
+
+
 
   arrangeCircles();
 
@@ -253,6 +267,13 @@
     canvas.style.cursor = hover ? 'pointer' : 'default';
   });
 
+
+
+
+
+
+
+  
   canvas.addEventListener('click', e => {
     const p = getPos(e);
     for (const c of circles) {
@@ -265,6 +286,19 @@
 
   animate();
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 
