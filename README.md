@@ -1,6 +1,6 @@
-ر<!-- 💙 README by Ziad Nassar 💙 -->
+<!-- 💙 README by Ziad Nassar 💙 -->
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=30&duration=3000&color=00BFFF&center=true&vCenter=true&lines=Hey+there!+I'm+Ziad+Nassar;Frontend+Developer;Creator+of+Code+Battle+Arena;Always+Learning+New+Tech!+⚡" alt="Typing Animation" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=30&duration=3000&color=00BFFF&center=true&vCenter=true&lines=Hey+there!+I'm+Ziad+Nassar;Full-Stack+Developer;AI+%26+Automation+Expert;C%2B%2B+%26+Unreal+Engine+Dev!+⚡" alt="Typing Animation" />
 </h1>
 
 <p align="center">
@@ -10,30 +10,31 @@
 ---
 
 ### 👨‍💻 About Me  
-Hey there! I'm **Ziad Nassar**, a **self-taught Frontend Developer** who loves turning ideas into beautiful, responsive, and interactive web experiences.  
-I'm skilled in **HTML**, **CSS**, **JavaScript**, and **C++**, and currently learning **Node.js** and **SQL** to master full-stack development.  
-I’m passionate about **clean design**, **creative UI**, and building cool web projects that push the limits ⚡  
+Hey there! I'm **Ziad Nassar**, a passionate **Full-Stack Developer** and **AI/Automation Specialist** who loves building high-performance systems and interactive digital experiences.
+
+* 🌐 **Full-Stack & Systems:** Crafting seamless user interfaces while engineering robust backend architectures and low-level system applications.
+* 🤖 **AI & Automation:** Proficient in deploying and fine-tuning **Open-Source AI Models** and designing advanced automated workflows to optimize productivity.
+* 🎮 **Game Dev & Simulation:** Deeply diving into **Unreal Engine** with advanced **C++** to build next-gen interactive environments.
+* 🐧 **Environment:** Powering development environments through **Linux** and mastering terminal wizardry via Git Bash and CMD.
 
 ---
 
 ### 💡 Technologies & Languages  
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,cpp,nodejs,mysql,react,bootstrap&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,mysql,py,cpp,linux,unreal,docker,git&theme=dark" />
 </p>
 
 ---
 
-### ⚔️ Featured Project — Code Battle Arena  
+### ⚔️ Featured Projects  
 
-🎮 **Code Battle Arena** is my first major project — a competitive coding game where players face off in logic and code battles.  
-It’s designed with a futuristic style and neon energy ⚡  
+#### 🎮 Code Battle Arena
+A competitive coding game where players face off in logic and code battles. Designed with a futuristic style and neon energy ⚡
+*(Repository coming soon... stay tuned!)*
 
-<p align="center">
-  <img src="https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/matrix.gif" width="500px" alt="Code Battle Arena Preview"/>
-</p>
-
-🔗 *Repository coming soon... stay tuned!*  
+#### 🚀 AI & Custom Automation Agents
+Developing custom workflow automations and leveraging open-source LLMs to automate complex software and business processes efficiently.
 
 ---
 
